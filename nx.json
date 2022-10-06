@@ -1,0 +1,42 @@
+{
+  "extends": "nx/presets/npm.json",
+  "npmScope": "we-mobius",
+  "affected": {
+    "defaultBase": "main"
+  },
+  "workspaceLayout": {
+    "appsDir": "applications",
+    "libsDir": "packages"
+  },
+  "implicitDependencies": {
+    "package.json": {
+      "dependencies": "*",
+      "devDependencies": "*"
+    },
+    "scripts": "*",
+    "tsconfig.base.json": "*",
+    "nx.json": "*"
+  },
+  "targetDefaults": {
+    "build": {
+      "dependsOn": [
+        "^build"
+      ]
+    }
+  },
+  "generators": {},
+  "tasksRunnerOptions": {
+    "default": {
+      "runner": "@nrwl/nx-cloud",
+      "options": {
+        "options": {
+          "cacheableOperations": [
+            "dev",
+            "build"
+          ],
+          "accessToken": "YzAzNTJmYjgtYWQ2ZS00ODMwLWI3MjktYWU3ZTJlYjMwNWZkfHJlYWQtd3JpdGU="
+        }
+      }
+    }
+  }
+}

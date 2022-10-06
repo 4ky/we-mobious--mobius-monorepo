@@ -1,0 +1,105 @@
+{
+  "editor.tabSize": 2,
+  "files.associations": {
+    "*.cjson": "jsonc",
+    "*.wxss": "css",
+    "*.wxs": "javascript",
+    ".cjs": "javascript",
+    ".mjs": "javascript",
+    "*.css": "postcss",
+    ".vue": "vue"
+  },
+  "files.autoSave": "off",
+  "files.insertFinalNewline": true,
+  "files.trimTrailingWhitespace": true,
+  "files.trimFinalNewlines": true,
+  "[html]": {
+    "editor.defaultFormatter": "vscode.html-language-features"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+    "editor.autoClosingBrackets": "always"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "vscode.json-language-features",
+    "editor.autoClosingBrackets": "always"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "[css]": {
+    "editor.defaultFormatter": "vscode.css-language-features"
+  },
+  "[scss]": {
+    "editor.defaultFormatter": "vscode.css-language-features"
+  },
+  "[postcss]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[handlebars]": {
+    "editor.defaultFormatter": "vscode.html-language-features"
+  },
+  "[haskell]": {
+    "editor.defaultFormatter": "vigoo.stylish-haskell"
+  },
+  "[yaml]": {
+    "editor.defaultFormatter": "redhat.vscode-yaml",
+    "editor.tabSize": 2
+  },
+  "[prisma]": {
+    "editor.defaultFormatter": "Prisma.prisma"
+  },
+  "[vue]": {
+    // "editor.defaultFormatter": "Vue.volar"
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "eslint.format.enable": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "eslint.alwaysShowStatus": true,
+  "eslint.validate": [
+    "javascript",
+    "typescript",
+    // {
+    //     "language": "vue",
+    //     "autoFix": true
+    // }
+  ],
+  "tailwindCSS.includeLanguages": {
+    "typescript": "html",
+    "javascript": "html",
+    "vue": "html",
+    "plaintext": "html"
+  },
+  "tailwindCSS.experimental.classRegex": [
+    "tw\\('([^']*)'\\)",
+    // @see https://github.com/paolotiu/tailwind-regex-list
+    [
+      "(?:c|C)lass(?:es|Name)s?(?:\\s*?)=(?:\\s*?)?\"\\[([^\"]*)\\]\"",
+      "(?:')([^']*)(?:')"
+    ],
+    [
+      "(?:c|C)lass(?:es|Name)s?(?:\\s*?)=(?:\\s*?)?\"\\[([^\"]*)\\]\"",
+      "(?:`)([^`]*)(?:`)"
+    ],
+    [
+      "(?:c|C)lass(?:es|Name)s?(?:\\s*?)=(?:\\s*?)?'\\[([^']*)\\]'",
+      "(?:\")([^\"]*)(?:\")"
+    ],
+    [
+      "(?:c|C)lass(?:es|Name)s?(?:\\s*?)=(?:\\s*?)?'\\[([^']*)\\]'",
+      "(?:`)([^`]*)(?:`)"
+    ],
+    "(?:c|C)lass(?:es|Name)s?(?:\\s*?)=(?:\\s*?)'([^']*)'",
+    "(?:c|C)lass(?:es|Name)s?(?:\\s*?)=(?:\\s*?)`([^`]*)`",
+    "(?:c|C)lass(?:es|Name)s?(?:\\s*?)=(?:\\s*?)\"([^\"]*)\"",
+    "(?::\\s*?)'([^']*)'",
+    "(?::\\s*?)`([^`]*)`",
+    "(?::\\s*?)\"([^\"]*)\"",
+  ]
+}

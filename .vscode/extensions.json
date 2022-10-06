@@ -1,0 +1,13 @@
+{
+  "recommendations": [
+    "dbaeumer.vscode-eslint",
+    "ms-vsliveshare.vsliveshare",
+    "mikestead.dotenv",
+    "nrwl.angular-console",
+    "redhat.vscode-yaml",
+    "redhat.vscode-xml",
+    "github.copilot",
+    "github.copilot-labs",
+    "github.codespaces"
+  ]
+}
