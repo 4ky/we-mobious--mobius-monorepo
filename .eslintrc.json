@@ -1,0 +1,5 @@
+{
+  "extends": [
+    "@we-mobius/eslint-config-basic"
+  ]
+}

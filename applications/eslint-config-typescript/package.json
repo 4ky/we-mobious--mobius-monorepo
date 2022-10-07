@@ -1,0 +1,19 @@
+{
+  "name": "@we-mobius/eslint-config-typescript",
+  "version": "0.0.1",
+  "main": "index.js",
+  "keywords": [
+    "eslint",
+    "eslintconfig",
+    "eslint-config"
+  ],
+  "dependencies": {
+    "@we-mobius/eslint-config-basic": "workspace:*",
+    "@typescript-eslint/eslint-plugin": "^5.38.1",
+    "@typescript-eslint/parser": "^5.38.1",
+    "eslint-config-standard-with-typescript": "^23.0.0"
+  },
+  "peerDependencies": {
+    "eslint": ">= 8.0.0"
+  }
+}

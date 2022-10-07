@@ -14,7 +14,9 @@
   "files.trimTrailingWhitespace": true,
   "files.trimFinalNewlines": true,
   "[html]": {
-    "editor.defaultFormatter": "vscode.html-language-features"
+    // "editor.defaultFormatter": "vscode.html-language-features"
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+    "editor.autoClosingBrackets": "always"
   },
   "[javascript]": {
     "editor.defaultFormatter": "dbaeumer.vscode-eslint",
@@ -24,11 +26,16 @@
     "editor.defaultFormatter": "dbaeumer.vscode-eslint"
   },
   "[json]": {
-    "editor.defaultFormatter": "vscode.json-language-features",
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint",
     "editor.autoClosingBrackets": "always"
   },
   "[jsonc]": {
-    "editor.defaultFormatter": "vscode.json-language-features"
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+    "editor.autoClosingBrackets": "always"
+  },
+  "[json5]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+    "editor.autoClosingBrackets": "always"
   },
   "[css]": {
     "editor.defaultFormatter": "vscode.css-language-features"
@@ -65,6 +72,13 @@
   "eslint.validate": [
     "javascript",
     "typescript",
+    "json",
+    "jsonc",
+    "json5",
+    {
+      "language": "html",
+      "autoFix": true
+    }
     // {
     //     "language": "vue",
     //     "autoFix": true
@@ -100,6 +114,6 @@
     "(?:c|C)lass(?:es|Name)s?(?:\\s*?)=(?:\\s*?)\"([^\"]*)\"",
     "(?::\\s*?)'([^']*)'",
     "(?::\\s*?)`([^`]*)`",
-    "(?::\\s*?)\"([^\"]*)\"",
+    "(?::\\s*?)\"([^\"]*)\""
   ]
 }
