@@ -311,6 +311,13 @@ export const typescriptSettings = {
   'import/resolver': {
     node: {
       extensions: ['.ts', '.mts', '.cts', '.tsx', '.js', '.mjs', '.cjs', '.jsx']
+    },
+    /**
+     * @see https://github.com/import-js/eslint-import-resolver-typescript
+     */
+    typescript: {
+      alwaysTryTypes: true,
+      project: typescriptParserOptions.project
     }
   }
 }
