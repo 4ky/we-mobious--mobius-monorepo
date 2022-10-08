@@ -1,11 +1,11 @@
-import { htmlPlugins, htmlOverride } from './config-parts/html.config-parts'
 import { eslintCommentsPlugins, eslintCommentsRules } from './config-parts/eslint-comments.config-parts'
-import { javascriptSettings, javascriptParserOptions, javascriptPlugins, javascriptOverride } from './config-parts/javascript.config-parts'
-import { jsonPlugins, jsonOverride } from './config-parts/json.config-parts'
-import { packageJSONOverride } from './config-parts/package-json.config-parts'
+import { htmlPlugins, htmlOverride } from './config-parts/html.config-parts'
 import { javascriptInHTMLPlugins, javascriptInHTMLSettings } from './config-parts/javascript-in-html.config-parts'
 import { javascriptInMarkdownPlugins, markdownProcessorOverride, javascriptInMarkdownOverride } from './config-parts/javascript-in-markdown.config-parts'
+import { javascriptSettings, javascriptParserOptions, javascriptPlugins, javascriptOverride } from './config-parts/javascript.config-parts'
+import { jsonPlugins, jsonOverride } from './config-parts/json.config-parts'
 import { nxPlugins } from './config-parts/nx.config-parts'
+import { packageJSONOverride } from './config-parts/package-json.config-parts'
 
 export const basicESLintConfig = {
   extends: [],

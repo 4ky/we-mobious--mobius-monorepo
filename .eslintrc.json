@@ -1,5 +1,3 @@
 {
-  "extends": [
-    "@we-mobius/eslint-config-basic"
-  ]
+  "extends": ["@we-mobius/eslint-config-typescript"]
 }

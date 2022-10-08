@@ -314,7 +314,7 @@ export const javascriptRulesFromImport = {
   'import/no-self-import': ['error'],
   'import/no-cycle': ['off'],
   'import/no-useless-path-segments': ['error', { noUselessIndex: false, commonjs: true }],
-  'no-relative-parent-imports': ['off'],
+  'import/no-relative-parent-imports': ['off'],
   'import/no-relative-packages': ['error'],
   // import:Helpful warnings
   'import/export': ['error'],
@@ -330,7 +330,7 @@ export const javascriptRulesFromImport = {
   'import/no-import-module-exports': ['error'],
   // import:Style guide
   'import/first': ['error'],
-  'import/exports-last': ['warn'],
+  'import/exports-last': ['off'],
   'import/no-duplicates': ['error', { considerQueryString: true }],
   'import/no-namespace': ['off'],
   'import/extensions': ['off'],
@@ -367,7 +367,7 @@ export const javascriptRulesFromImport = {
   'import/no-named-default': ['error'],
   // TODO: 2022-10-06 23:22:00 not released yet
   'import/no-anonymous-default-export': ['error'],
-  'import/group-exports': ['error'],
+  'import/group-exports': ['off'],
   'dynamic-import-chunkname': ['off']
   // TODO: 2022-10-06 23:22:00 not released yet
   // 'import/consistent-type-specifier-style': ['error', 'prefer-top-level']
@@ -475,7 +475,7 @@ export const javascriptRules = {
 }
 export const javascriptSettings = {
   'import/resolver': {
-    node: { extensions: ['.js', '.mjs'] }
+    node: { extensions: ['.js', '.mjs', '.cjs'] }
   }
 }
 export const javascriptOverride = {

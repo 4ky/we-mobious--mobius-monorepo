@@ -1,0 +1,34 @@
+{
+  "extends": "@we-mobius/tsconfig/tsconfig.monorepo.json",
+  "compilerOptions": {
+    "rootDir": ".",
+    "rootDirs": [
+      "packages/**/src",
+      "utilities/**/src",
+      "features/**/src",
+      "applications/**/src",
+      "engineerings/**/src",
+      "elements/**/src",
+      "services/**/src",
+      "components/**/src"
+    ]
+  },
+  "include": [
+    "src/**/*",
+    "packages/**/*",
+    "utilities/**/*",
+    "features/**/*",
+    "applications/**/*",
+    "engineerings/**/*",
+    "elements/**/*",
+    "services/**/*",
+    "components/**/*"
+  ],
+  "exclude": [
+    "**/node_modules",
+    "**/dist",
+    "**/build",
+    "**/dev",
+    "**/release"
+  ]
+}
