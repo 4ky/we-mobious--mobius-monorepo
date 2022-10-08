@@ -1,5 +1,10 @@
 {
   "editor.tabSize": 2,
+  "prettier.enable": false,
+  "editor.formatOnSave": false,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
   "files.associations": {
     "*.cjson": "jsonc",
     "*.wxss": "css",
@@ -7,12 +12,16 @@
     ".cjs": "javascript",
     ".mjs": "javascript",
     "*.css": "postcss",
-    ".vue": "vue"
+    ".vue": "vue",
+    ".md": "markdown"
   },
   "files.autoSave": "off",
   "files.insertFinalNewline": true,
   "files.trimTrailingWhitespace": true,
   "files.trimFinalNewlines": true,
+  "[markdown]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
   "[html]": {
     // "editor.defaultFormatter": "vscode.html-language-features"
     "editor.defaultFormatter": "dbaeumer.vscode-eslint",
@@ -65,12 +74,12 @@
   },
   "javascript.updateImportsOnFileMove.enabled": "always",
   "eslint.format.enable": true,
-  "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true
-  },
   "eslint.alwaysShowStatus": true,
   "eslint.validate": [
-    "javascript",
+    {
+      "language": "javascript",
+      "autoFix": true
+    },
     "typescript",
     "json",
     "jsonc",
@@ -78,6 +87,10 @@
     {
       "language": "html",
       "autoFix": true
+    },
+    {
+      "language": "markdown",
+      "autoFix": false
     }
     // {
     //     "language": "vue",
