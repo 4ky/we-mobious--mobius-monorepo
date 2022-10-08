@@ -392,10 +392,10 @@ export const javascriptRulesFromN = {
   'n/no-path-concat': ['error'],
   'n/no-process-exit': ['warn'],
   'n/no-unpublished-bin': ['error'],
-  'n/no-unpublished-import': ['error', {
+  'n/no-unpublished-import': ['off', {
     allowModules: ['electron']
   }],
-  'n/no-unpublished-require': ['error', {
+  'n/no-unpublished-require': ['off', {
     allowModules: ['electron']
   }],
   'n/no-unsupported-features/es-builtins': ['off'],

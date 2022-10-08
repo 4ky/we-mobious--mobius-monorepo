@@ -295,6 +295,7 @@ export const typescriptRules = {
   ...typescriptRulesFromJavaScript,
   ...typescriptRulesFromTypeScriptESLintESLintRecommended,
   ...typescriptRulesFromTypeScriptESLint,
+  ...typescriptRulesFromESLintConfigStandardWithTypeScript,
   ...typescriptRulesFromImport,
   '@typescript-eslint/no-non-null-assertion': ['off'],
   '@typescript-eslint/unified-signatures': ['off'],
