@@ -476,13 +476,105 @@ const javascriptRulesFromESlintComments = {
   'eslint-comments/no-use': ['off'],
   'eslint-comments/require-description': ['error', { ignore: [] }]
 }
+
+/**
+ * @see https://nx.dev/core-features/enforce-project-boundaries
+ */
+const javascriptRulesFromNX = {
+  '@nrwl/nx/enforce-module-boundaries': [
+    'error',
+    {
+      allow: [],
+      allowCircularSelfDependency: true,
+      enforceBuildableLibDependency: false,
+      banTransitiveDependencies: true,
+      depConstraints: [
+        {
+          sourceTag: '*',
+          onlyDependOnLibsWithTags: [
+            '*'
+          ]
+        },
+        {
+          sourceTag: 'type:free',
+          onlyDependOnLibsWithTags: [
+            '*'
+          ]
+        },
+        {
+          sourceTag: 'type:utility',
+          onlyDependOnLibsWithTags: [
+            'type:free',
+            'type:utility'
+          ]
+        },
+        {
+          sourceTag: 'type:feature',
+          onlyDependOnLibsWithTags: [
+            'type:free',
+            'type:utility',
+            'type:feature'
+          ]
+        },
+        {
+          sourceTag: 'type:application',
+          onlyDependOnLibsWithTags: [
+            'type:free',
+            'type:utility',
+            'type:feature'
+          ]
+        },
+        {
+          sourceTag: 'type:engineering',
+          onlyDependOnLibsWithTags: [
+            'type:free',
+            'type:utility',
+            'type:feature',
+            'type:engineering'
+          ]
+        },
+        {
+          sourceTag: 'type:element',
+          onlyDependOnLibsWithTags: [
+            'type:free',
+            'type:utility',
+            'type:feature',
+            'type:element'
+          ]
+        },
+        {
+          sourceTag: 'type:service',
+          onlyDependOnLibsWithTags: [
+            'type:free',
+            'type:utility',
+            'type:feature',
+            'type:service'
+          ]
+        },
+        {
+          sourceTag: 'type:component',
+          onlyDependOnLibsWithTags: [
+            'type:free',
+            'type:utility',
+            'type:feature',
+            'type:element',
+            'type:serivce',
+            'type:component'
+          ]
+        }
+      ]
+    }
+  ]
+}
+
 const javascriptRules = {
   ...javascriptRulesFromESLint,
   ...javascriptRulesFromStandard,
   ...javascriptRulesFromImport,
   ...javascriptRulesFromN,
   ...javascriptRulesFromPromise,
-  ...javascriptRulesFromESlintComments
+  ...javascriptRulesFromESlintComments,
+  ...javascriptRulesFromNX
 }
 const javascriptSettings = {
   'import/resolver': {
@@ -901,7 +993,7 @@ module.exports = {
   noInlineConfig: false,
   reportUnusedDisableDirectives: true,
   // @see https://eslint.org/docs/latest/user-guide/configuring/plugins
-  plugins: ['import', 'n', 'promise', 'eslint-comments', 'jsonc', 'html', '@html-eslint', 'markdown'],
+  plugins: ['import', 'n', 'promise', 'eslint-comments', 'jsonc', 'html', '@html-eslint', 'markdown', '@nrwl/nx'],
   // @see https://eslint.org/docs/latest/user-guide/configuring/ignoring-code
   // @see derived from https://github.com/antfu/eslint-config/blob/main/packages/basic/index.js#L16-L32
   ignorePatterns: [
