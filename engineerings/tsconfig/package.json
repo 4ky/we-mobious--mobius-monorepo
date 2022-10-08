@@ -1,0 +1,26 @@
+{
+  "name": "@we-mobius/tsconfig",
+  "version": "0.0.1",
+  "keywords": [
+    "mobius",
+    "tsconfig"
+  ],
+  "main": "tsconfig.base.json",
+  "exports": {
+    "./tsconfig": "./tsconfig.base.json",
+    "./tsconfig.base": "./tsconfig.base.json",
+    "./tsconfig.monorepo": "./tsconfig.monorepo.json",
+    "./tsconfig.commonjs": "./tsconfig.monorepo.json"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "peerDependencies": {
+    "@types/node": "*"
+  },
+  "peerDependenciesMeta": {
+    "@types/node": {
+      "optional": true
+    }
+  }
+}
