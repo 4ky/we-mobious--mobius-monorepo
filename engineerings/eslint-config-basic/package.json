@@ -1,12 +1,34 @@
 {
   "name": "@we-mobius/eslint-config-basic",
+  "type": "module",
   "version": "0.0.1",
   "keywords": [
+    "mobius",
     "eslint",
     "eslintconfig",
     "eslint-config"
   ],
-  "main": "index.js",
+  "typings": "./src/index.ts",
+  "types": "./src/index.ts",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "exports": {
+    ".": {
+      "require": "./dist/main.cjs",
+      "import": "./dist/main.js",
+      "default": "./dist/main.js"
+    },
+    "./ts": "./src/index.ts",
+    "./package.json": "./package.json"
+  },
+  "typesVersions": {
+    "*": {
+      "ts": ["./src/index.ts"]
+    }
+  },
+  "scripts": {
+    "build": "pnpm exec tsx ./scripts/build.ts"
+  },
   "peerDependencies": {
     "eslint": ">= 8.0.0"
   },
@@ -25,5 +47,10 @@
     "eslint-plugin-n": "^15.2.5",
     "eslint-plugin-promise": "^6.0.1",
     "jsonc-eslint-parser": "^2.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "^18.7.23",
+    "esbuild": "^0.15.10",
+    "tsx": "^3.9.0"
   }
 }
