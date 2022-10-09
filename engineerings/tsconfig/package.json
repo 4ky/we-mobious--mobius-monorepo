@@ -13,15 +13,15 @@
     "./tsconfig.commonjs": "./tsconfig.monorepo.json"
   },
   "files": [
-    "/release/*",
-    "/dist/*",
-    "/build/*",
-    "/src/*",
-    "/scripts/*",
-    "/public/*",
-    "/docs/*",
-    "/bin/*",
-    "/typings/*"
+    "release/**/*",
+    "dist/**/*",
+    "build/**/*",
+    "src/**/*",
+    "scripts/**/*",
+    "public/**/*",
+    "docs/**/*",
+    "bin/**/*",
+    "typings/**/*"
   ],
   "publishConfig": {
     "access": "public",
