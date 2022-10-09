@@ -1,3 +1,3 @@
 {
-  "extends": ["@we-mobius/eslint-config-typescript"]
+  "extends": ["@we-mobius/eslint-config-vue"]
 }

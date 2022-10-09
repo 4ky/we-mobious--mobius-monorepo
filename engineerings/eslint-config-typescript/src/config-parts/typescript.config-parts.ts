@@ -328,7 +328,5 @@ export const typescriptOverride = {
   plugins: [...typescriptPlugins],
   parser: '@typescript-eslint/parser',
   parserOptions: typescriptParserOptions,
-  rules: {
-    ...typescriptRules
-  }
+  rules: { ...typescriptRules }
 }

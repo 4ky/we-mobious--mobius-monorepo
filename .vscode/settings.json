@@ -91,11 +91,11 @@
     {
       "language": "markdown",
       "autoFix": false
+    },
+    {
+      "language": "vue",
+      "autoFix": true
     }
-    // {
-    //     "language": "vue",
-    //     "autoFix": true
-    // }
   ],
   "tailwindCSS.includeLanguages": {
     "typescript": "html",

@@ -25,10 +25,12 @@
     "@types/node": "^18.8.2",
     "@we-mobius/eslint-config-basic": "workspace:*",
     "@we-mobius/eslint-config-typescript": "workspace:*",
+    "@we-mobius/eslint-config-vue": "workspace:*",
     "@we-mobius/tsconfig": "workspace:*",
     "eslint": "^8.24.0",
     "nx": "^14.8.2",
     "tsx": "^3.9.0",
-    "typescript": "^4.8.4"
+    "typescript": "^4.8.4",
+    "vue": "^3.2.40"
   }
 }
