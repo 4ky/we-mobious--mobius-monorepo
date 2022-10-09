@@ -1,0 +1,19 @@
+{
+  "tags": ["type:engineering"],
+  "namedInputs": {
+    "default": ["{projectRoot}/**/*"]
+  },
+  "targets": {
+    "build": {
+      "executor": "nx:run-commands",
+      "inputs": ["default"],
+      "outputs": ["dist"],
+      "dependsOn": ["^build"],
+      "options": {
+        "cwd": "engineerings/eslint-config-vue",
+        "commands": ["pnpm exec tsx ./scripts/build.ts"],
+        "parallel": false
+      }
+    }
+  }
+}
