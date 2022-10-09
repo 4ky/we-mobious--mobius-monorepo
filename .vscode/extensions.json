@@ -16,6 +16,11 @@
     "visualstudioexptteam.intellicode-api-usage-examples",
     "visualstudioexptteam.vscodeintellicode",
     "wix.vscode-import-cost",
-    "eamodio.gitlens"
+    "eamodio.gitlens",
+    "streetsidesoftware.code-spell-checker",
+    "EditorConfig.EditorConfig",
+    "github.vscode-pull-request-github",
+    "znck.grammarly",
+    "ysemeniuk.emmet-live"
   ]
 }

@@ -12,8 +12,20 @@
     "./tsconfig.monorepo": "./tsconfig.monorepo.json",
     "./tsconfig.commonjs": "./tsconfig.monorepo.json"
   },
+  "files": [
+    "/release/*",
+    "/dist/*",
+    "/build/*",
+    "/src/*",
+    "/scripts/*",
+    "/public/*",
+    "/docs/*",
+    "/bin/*",
+    "/typings/*"
+  ],
   "publishConfig": {
-    "access": "public"
+    "access": "public",
+    "registry": "https://registry.npmjs.org"
   },
   "peerDependencies": {
     "@types/node": "*"

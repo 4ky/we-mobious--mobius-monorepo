@@ -13,7 +13,8 @@
     ".mjs": "javascript",
     "*.css": "postcss",
     ".vue": "vue",
-    ".md": "markdown"
+    ".md": "markdown",
+    ".code-snippets": "json"
   },
   "files.autoSave": "off",
   "files.insertFinalNewline": true,

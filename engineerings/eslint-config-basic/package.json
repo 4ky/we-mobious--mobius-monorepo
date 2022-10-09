@@ -36,6 +36,10 @@
   "scripts": {
     "build": "pnpm exec tsx ./scripts/build.ts"
   },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org"
+  },
   "peerDependencies": {
     "eslint": ">= 8.0.0"
   },
