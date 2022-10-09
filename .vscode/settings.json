@@ -80,10 +80,22 @@
       "language": "javascript",
       "autoFix": true
     },
-    "typescript",
-    "json",
-    "jsonc",
-    "json5",
+    {
+      "language": "typescript",
+      "autoFix": true
+    },
+    {
+      "language": "json",
+      "autoFix": true
+    },
+    {
+      "language": "jsonc",
+      "autoFix": true
+    },
+    {
+      "language": "json5",
+      "autoFix": true
+    },
     {
       "language": "html",
       "autoFix": true

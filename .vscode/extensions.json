@@ -1,5 +1,7 @@
 {
   "recommendations": [
+    "Vue.volar",
+    "Vue.vscode-typescript-vue-plugin",
     "dbaeumer.vscode-eslint",
     "ms-vsliveshare.vsliveshare",
     "mikestead.dotenv",
@@ -8,6 +10,12 @@
     "redhat.vscode-xml",
     "github.copilot",
     "github.copilot-labs",
-    "github.codespaces"
+    "github.codespaces",
+    "quicktype.quicktype",
+    "christian-kohler.npm-intellisense",
+    "visualstudioexptteam.intellicode-api-usage-examples",
+    "visualstudioexptteam.vscodeintellicode",
+    "wix.vscode-import-cost",
+    "eamodio.gitlens"
   ]
 }
