@@ -1,7 +1,7 @@
 {
   "name": "@we-mobius/eslint-config-basic",
   "type": "module",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "keywords": [
     "mobius",
     "eslint",
