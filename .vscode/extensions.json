@@ -1,26 +1,33 @@
 {
   "recommendations": [
-    "Vue.volar",
-    "Vue.vscode-typescript-vue-plugin",
-    "dbaeumer.vscode-eslint",
-    "ms-vsliveshare.vsliveshare",
+    // Language support
+    "vue.volar",
+    "vue.vscode-typescript-vue-plugin",
     "mikestead.dotenv",
-    "nrwl.angular-console",
     "redhat.vscode-yaml",
     "redhat.vscode-xml",
+    "editorconfig.editorconfig",
+
+    // Coding Support
+    "dbaeumer.vscode-eslint",
+    "quicktype.quicktype",
+    "christian-kohler.npm-intellisense",
     "github.copilot",
     "github.copilot-labs",
     "github.codespaces",
-    "quicktype.quicktype",
-    "christian-kohler.npm-intellisense",
     "visualstudioexptteam.intellicode-api-usage-examples",
     "visualstudioexptteam.vscodeintellicode",
-    "wix.vscode-import-cost",
-    "eamodio.gitlens",
     "streetsidesoftware.code-spell-checker",
-    "EditorConfig.EditorConfig",
-    "github.vscode-pull-request-github",
     "znck.grammarly",
-    "ysemeniuk.emmet-live"
+    "ysemeniuk.emmet-live",
+
+    // Project support
+    "eamodio.gitlens",
+    "wix.vscode-import-cost",
+    "nrwl.angular-console",
+    "github.vscode-pull-request-github",
+
+    // Collaboration support
+    "ms-vsliveshare.vsliveshare"
   ]
 }

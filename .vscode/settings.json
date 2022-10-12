@@ -1,10 +1,32 @@
 {
+  "explorer.fileNesting.enabled": true,
+  "explorer.fileNesting.expand": false,
+  // Inspired by antfu's config, see: https://github.com/antfu/vscode-file-nesting-config
+  "explorer.fileNesting.patterns": {
+    ".gitignore": ".gitattributes, .gitmodules, .gitmessage, .mailmap, .git-blame*",
+    "dockerfile": ".dockerignore, docker-compose.*, dockerfile*",
+    "readme*": "LICENSE, project-words.txt, authors, backers*, changelog*, citation*, code_of_conduct*, codeowners, contributing*, contributors, copying, credits, governance.md, history.md, license*, maintainers, readme*, security.md, sponsors*",
+    "package.json": ".npmrc, .npmignore, package-lock.json, yarn.lock, pnpm-lock.yaml",
+    "pnpm-workspace.yaml": "nx.json, .nxignore",
+    "tsconfig.json": "tsconfig.*.json",
+    ".eslint*": ".editorconfig",
+    ".env": "*.env, .env.*, .envrc, env.d.ts",
+    "*.ts": "${capture}.js",
+    "*.js": "${capture}.js.map, ${capture}.min.js, ${capture}.d.ts",
+    "*.jsx": "${capture}.js",
+    "*.tsx": "${capture}.ts",
+    "index.ts": "index.*.ts",
+    "main.ts": "main.*.ts"
+  },
+  "explorer.incrementalNaming": "smart",
   "editor.tabSize": 2,
   "prettier.enable": false,
   "editor.formatOnSave": false,
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true
   },
+  "editor.bracketPairColorization.enabled": true,
+  "editor.guides.bracketPairs": "active",
   "files.associations": {
     "*.cjson": "jsonc",
     "*.wxss": "css",
@@ -141,5 +163,55 @@
     "(?::\\s*?)'([^']*)'",
     "(?::\\s*?)`([^`]*)`",
     "(?::\\s*?)\"([^\"]*)\""
-  ]
+  ],
+  "cSpell.enabled": true,
+  "cSpell.language": "en",
+  "cSpell.caseSensitive": false,
+  "cSpell.customDictionaries": {
+    "project-words": {
+      "name": "project-words",
+      "path": "${workspaceRoot}/project-words.txt",
+      "description": "Words used in this project",
+      "addWords": true
+    }
+  },
+  "cSpell.showStatus": true,
+  // Specify file types to spell check.
+  "cSpell.enabledLanguageIds": [
+    "csharp",
+    "go",
+    "javascript",
+    "javascriptreact",
+    "markdown",
+    "php",
+    "plaintext",
+    "typescript",
+    "typescriptreact",
+    "yml",
+    "yaml",
+    "json",
+    "json5",
+    "jsonc",
+    "css"
+  ],
+  "cSpell.allowCompoundWords": false,
+  "cSpell.globRoot": "${workspaceFolder}",
+  "cSpell.ignorePaths": [
+    "node_modules",        // this will ignore anything the node_modules directory
+    "**/node_modules",     // the same for this one
+    "**/node_modules/**",  // the same for this one
+    "node_modules/**",     // Doesn't currently work due to how the current working directory is determined.
+    "vscode-extension",    //
+    ".git",                // Ignore the .git directory
+    "*.dll",               // Ignore all .dll files.
+    "**/*.dll",             // Ignore all .dll files
+    "package-lock.json",
+    ".vscode",
+    ".vscode-insiders"
+  ],
+  "cSpell.diagnosticLevel": "Hint",
+  "grammarly.config.documentDialect": "auto-text",
+  "grammarly.config.documentDomain": "general",
+  "grammarly.files.include": ["**/README.md", "**/readme.md", "**/*.txt"],
+  "grammarly.files.exclude": ["**/node_modules/**"]
 }
