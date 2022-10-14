@@ -1,18 +1,21 @@
 {
   "name": "@we-mobius/tsconfig",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "keywords": [
     "mobius",
     "tsconfig"
   ],
-  "main": "./src/tsconfig.base.json",
+  "main": "./tsconfig.base.json",
   "exports": {
-    "./tsconfig": "./src/tsconfig.base.json",
-    "./tsconfig.base": "./src/tsconfig.base.json",
-    "./tsconfig.monorepo": "./src/tsconfig.monorepo.json",
-    "./tsconfig.commonjs": "./src/tsconfig.commonjs.json"
+    "./tsconfig": "./tsconfig.base.json",
+    "./tsconfig/base": "./tsconfig.base.json",
+    "./tsconfig/monorepo": "./tsconfig.monorepo.json",
+    "./tsconfig/commonjs": "./tsconfig.commonjs.json"
   },
   "files": [
+    "./tsconfig.base.json",
+    "./tsconfig.monorepo.json",
+    "./tsconfig.commonjs.json",
     "release/**/*",
     "dist/**/*",
     "build/**/*",
