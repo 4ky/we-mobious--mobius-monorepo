@@ -1,17 +1,27 @@
 {
-  "tags": ["type:engineering"],
-  "namedInputs": {
-    "default": ["{projectRoot}/**/*"]
-  },
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "name": "eslint-config-typescript",
+  "root": "engineerings/eslint-config-typescript",
+  "sourceRoot": "engineerings/eslint-config-typescript/src",
+  "tags": [
+    "scope:engineering-eslint-config-typescript",
+    "type:engineering"
+  ],
+  "implicitDependencies": [],
+  "namedInputs": {},
   "targets": {
     "build": {
       "executor": "nx:run-commands",
-      "inputs": ["default"],
-      "outputs": ["dist"],
-      "dependsOn": ["^build"],
+      "inputs": [
+        {"runtime": "node -v"},
+        {"input": "all", "projects": "self"},
+        {"input": "all", "projects": "dependencies"}
+      ],
+      "outputs": ["{projectRoot}/dist"],
+      "dependsOn": [{"target": "build", "projects": "dependencies"}],
       "options": {
         "cwd": "engineerings/eslint-config-typescript",
-        "commands": ["pnpm exec tsx ./scripts/build.ts"],
+        "commands": ["pnpm run build"],
         "parallel": false
       }
     }

@@ -1,17 +1,27 @@
 {
-  "tags": ["type:engineering"],
-  "namedInputs": {
-    "default": ["{projectRoot}/**/*"]
-  },
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "name": "eslint-config-vue",
+  "root": "engineerings/eslint-config-vue",
+  "sourceRoot": "engineerings/eslint-config-vue/src",
+  "tags": [
+    "scope:engineering-eslint-config-vue",
+    "type:engineering"
+  ],
+  "implicitDependencies": [],
+  "namedInputs": {},
   "targets": {
     "build": {
       "executor": "nx:run-commands",
-      "inputs": ["default"],
-      "outputs": ["dist"],
-      "dependsOn": ["^build"],
+      "inputs": [
+        {"runtime": "node -v"},
+        {"input": "all", "projects": "self"},
+        {"input": "all", "projects": "dependencies"}
+      ],
+      "outputs": ["{projectRoot}/dist"],
+      "dependsOn": [{"target": "build", "projects": "dependencies"}],
       "options": {
         "cwd": "engineerings/eslint-config-vue",
-        "commands": ["pnpm exec tsx ./scripts/build.ts"],
+        "commands": ["pnpm run build"],
         "parallel": false
       }
     }

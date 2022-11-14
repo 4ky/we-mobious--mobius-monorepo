@@ -1,7 +1,7 @@
 {
   "name": "@we-mobius/eslint-config-typescript",
   "type": "module",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "keywords": [
     "mobius",
     "eslint",

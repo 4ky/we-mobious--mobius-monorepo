@@ -1,6 +1,6 @@
 {
-  "extends": "nx/presets/npm.json",
-  "npmScope": "we-mobius",
+  "$schema": "./node_modules/nx/schemas/nx-schema.json",
+  "npmScope": "planet-matrix",
   "affected": {
     "defaultBase": "main"
   },
@@ -11,18 +11,30 @@
   "implicitDependencies": {
     "package.json": {
       "dependencies": "*",
-      "devDependencies": "*"
+      "devDependencies": "*",
+      "peerDependencies": "*",
+      "scripts": "*"
     },
-    "scripts": "*",
-    "tsconfig.base.json": "*",
+    "tsconfig.json": "*",
+    "project.json": "*",
     "nx.json": "*"
   },
+  "namedInputs": {
+    "all": ["{projectRoot}/**/*", "!{projectRoot}/node_modules/**/*"],
+    "dev": ["{projectRoot}/**/*", "!{projectRoot}/node_modules/**/*", "!{projectRoot}/dist/**/*"],
+    "dist": ["{projectRoot}/dist/**/*"],
+    "src": ["{projectRoot}/src/**/*"]
+  },
   "targetDefaults": {
+    "dev": {
+      "dependsOn": [{"target": "build", "projects": "dependencies"}]
+    },
     "build": {
-      "dependsOn": ["^build"]
+      "dependsOn": [{"target": "build", "projects": "dependencies"}],
+      "outputs": ["{projectRoot}/dist"]
     },
     "test": {
-      "dependsOn": ["build"]
+      "dependsOn": [{"target": "build", "projects": "self"}]
     }
   },
   "pluginsConfig": {
@@ -39,7 +51,6 @@
       "runner": "@nrwl/nx-cloud",
       "options": {
         "cacheableOperations": [
-          "dev",
           "build",
           "lint",
           "test"

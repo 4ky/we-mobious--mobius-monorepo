@@ -1,4 +1,5 @@
 import { writeFileSync } from 'node:fs'
+
 import { buildSync } from 'esbuild'
 
 const code = buildSync({

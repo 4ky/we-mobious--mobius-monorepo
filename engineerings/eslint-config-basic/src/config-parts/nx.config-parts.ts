@@ -10,7 +10,9 @@ export const nxRules = {
       allow: [],
       allowCircularSelfDependency: true,
       enforceBuildableLibDependency: false,
-      banTransitiveDependencies: true,
+      // NOTE: 2022-11-14 03:34 确认是 Nx bug，应该根据包的 package.json 判断是否为直接依赖，而非根据 workspace 的 package.json 判断
+      // 在使用 pnpm 作为包管理工具，且关闭 shame hoist 的时候，这个选项也是没有必要的
+      banTransitiveDependencies: false,
       depConstraints: [
         {
           sourceTag: '*',
