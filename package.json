@@ -12,6 +12,7 @@
   "license": "GPL-3.0",
   "scripts": {
     "prepare": "husky install",
+    "commit": "pnpm exec cz",
     "dev:all": "pnpm exec nx run-many --target=dev --all --parallel",
     "dev:affected": "pnpm exec nx affected --target=dev --all --parallel",
     "test:all": "pnpm exec nx run-many --target=test --all --parallel",
@@ -29,6 +30,8 @@
     "@we-mobius/mobius-utils": "^1.8.1"
   },
   "devDependencies": {
+    "@commitlint/cli": "^17.2.0",
+    "@commitlint/cz-commitlint": "^17.2.0",
     "@nrwl/devkit": "^15.0.13",
     "@nrwl/eslint-plugin-nx": "^15.0.13",
     "@nrwl/js": "^15.0.13",
@@ -38,6 +41,7 @@
     "@we-mobius/eslint-config-typescript": "workspace:*",
     "@we-mobius/eslint-config-vue": "workspace:*",
     "@we-mobius/tsconfig": "workspace:*",
+    "commitizen": "^4.2.5",
     "eslint": "^8.24.0",
     "husky": "^8.0.0",
     "nx": "^15.0.13",
