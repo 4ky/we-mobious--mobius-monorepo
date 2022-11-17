@@ -1,17 +1,36 @@
 {
   "name": "@we-mobius/tsconfig",
   "type": "module",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "keywords": [
     "mobius",
     "tsconfig"
   ],
-  "main": "./tsconfig.base.json",
+  "typings": "./src/index.ts",
+  "types": "./src/index.ts",
+  "main": "./dist/main.js",
+  "module": "./dist/main.js",
   "exports": {
+    ".": {
+      "require": "./dist/main.cjs",
+      "import": "./dist/main.js",
+      "default": "./dist/main.js"
+    },
+    "./index": {
+      "require": "./dist/index.cjs",
+      "import": "./dist/index.js",
+      "default": "./dist/index.js"
+    },
+    "./ts": "./src/index.ts",
+    "./package.json": "./package.json",
+
     "./tsconfig.json": "./tsconfig.base.json",
     "./tsconfig.base.json": "./tsconfig.base.json",
     "./tsconfig.monorepo.json": "./tsconfig.monorepo.json",
     "./tsconfig.commonjs.json": "./tsconfig.commonjs.json"
+  },
+  "scripts": {
+    "build": "pnpm exec tsx ./scripts/build.ts"
   },
   "files": [
     "./tsconfig.base.json",
@@ -32,11 +51,17 @@
     "registry": "https://registry.npmjs.org"
   },
   "peerDependencies": {
-    "@types/node": "*"
+    "@types/node": "*",
+    "typescript": "*"
   },
   "peerDependenciesMeta": {
     "@types/node": {
       "optional": true
     }
+  },
+  "devDependencies": {
+    "esbuild": "^0.15.14",
+    "tsx": "^3.12.1",
+    "typescript": "*"
   }
 }
