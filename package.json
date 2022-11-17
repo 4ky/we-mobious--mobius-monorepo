@@ -11,6 +11,7 @@
   },
   "license": "GPL-3.0",
   "scripts": {
+    "prepare": "husky install",
     "dev:all": "pnpm exec nx run-many --target=dev --all --parallel",
     "dev:affected": "pnpm exec nx affected --target=dev --all --parallel",
     "test:all": "pnpm exec nx run-many --target=test --all --parallel",
@@ -19,7 +20,10 @@
     "build:affected": "pnpm exec nx affected --target=build --all --parallel",
     "graph:all": "pnpm exec nx graph",
     "graph:watch": "pnpm exec nx graph --watch",
-    "reset": "pnpm exec nx reset"
+    "reset": "pnpm exec nx reset",
+    "lint": "pnpm exec eslint .",
+    "lint:fix": "pnpm exec eslint . --fix --ignore-path .gitignore",
+    "type-check": "pnpm --filter \"*\" run type-check"
   },
   "dependencies": {
     "@we-mobius/mobius-utils": "^1.8.1"
@@ -35,6 +39,7 @@
     "@we-mobius/eslint-config-vue": "workspace:*",
     "@we-mobius/tsconfig": "workspace:*",
     "eslint": "^8.24.0",
+    "husky": "^8.0.0",
     "nx": "^15.0.13",
     "tsx": "^3.9.0",
     "typescript": "^4.8.4",
