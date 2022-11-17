@@ -12,7 +12,7 @@
   "license": "GPL-3.0",
   "scripts": {
     "prepare": "husky install",
-    "commit": "pnpm exec cz",
+    "cmt": "pnpm exec cz",
     "dev:all": "pnpm exec nx run-many --target=dev --all --parallel",
     "dev:affected": "pnpm exec nx affected --target=dev --all --parallel",
     "test:all": "pnpm exec nx run-many --target=test --all --parallel",
