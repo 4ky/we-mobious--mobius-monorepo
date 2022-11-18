@@ -1,0 +1,82 @@
+{
+  "name": "@we-mobius/commitizen",
+  "type": "module",
+  "version": "0.0.1",
+  "keywords": [
+    "mobius",
+    "git",
+    "commit",
+    "commitizen"
+  ],
+  "typings": "./src/index.ts",
+  "types": "./src/index.ts",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "exports": {
+    ".": {
+      "require": "./dist/index.cjs",
+      "import": "./dist/index.js",
+      "default": "./dist/index.js"
+    },
+    "./index": {
+      "require": "./dist/index.cjs",
+      "import": "./dist/index.js",
+      "default": "./dist/index.js"
+    },
+    "./main": {
+      "require": "./dist/main.cjs",
+      "import": "./dist/main.js",
+      "default": "./dist/main.js"
+    },
+    "./adapter": {
+      "require": "./dist/adapter.cjs",
+      "import": "./dist/adapter.js",
+      "default": "./dist/adapter.js"
+    },
+    "./commitlint": {
+      "require": "./dist/commitlint.cjs",
+      "import": "./dist/commitlint.js",
+      "default": "./dist/commitlint.js"
+    },
+    "./ts": "./src/index.ts",
+    "./package.json": "./package.json"
+  },
+  "typesVersions": {
+    "*": {
+      "index": ["./src/index.ts"],
+      "ts": ["./src/index.ts"]
+    }
+  },
+  "bin": {
+    "commit": "./bin/commit.js",
+    "cmt": "./bin/cmt.cjs"
+  },
+  "scripts": {
+    "build": "pnpm exec tsx ./scripts/build.ts"
+  },
+  "files": [
+    "release/**/*",
+    "dist/**/*",
+    "build/**/*",
+    "src/**/*",
+    "scripts/**/*",
+    "public/**/*",
+    "docs/**/*",
+    "bin/**/*",
+    "typings/**/*"
+  ],
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org"
+  },
+  "dependencies": {
+    "commitizen": "^4.2.5",
+    "inquirer": "^9.1.4"
+  },
+  "devDependencies": {
+    "@types/inquirer": "^9.0.3",
+    "@types/node": "^18.11.9",
+    "esbuild": "^0.15.14",
+    "tsx": "^3.12.1"
+  }
+}
