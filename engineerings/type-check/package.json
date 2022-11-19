@@ -1,0 +1,68 @@
+{
+  "name": "@we-mobius/type-check",
+  "type": "module",
+  "version": "0.0.1",
+  "description": "Type-checking support.",
+  "author": {
+    "name": "kongxiangyan",
+    "email": "kcigaret@outlook.com",
+    "url": "https://www.cigaret.world/"
+  },
+  "license": "GPL-3.0",
+  "keywords": [
+    "mobius",
+    "javascript",
+    "typescript",
+    "type-check",
+    "type-checking"
+  ],
+  "typings": "./src/index.ts",
+  "types": "./src/index.ts",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "exports": {
+    ".": {
+      "require": "./dist/index.cjs",
+      "import": "./dist/index.js",
+      "default": "./dist/index.js"
+    },
+    "./index": {
+      "require": "./dist/index.cjs",
+      "import": "./dist/index.js",
+      "default": "./dist/index.js"
+    },
+    "./ts": "./src/index.ts",
+    "./package.json": "./package.json"
+  },
+  "typesVersions": {
+    "*": {
+      "index": ["./src/index.ts"],
+      "ts": ["./src/index.ts"]
+    }
+  },
+  "scripts": {
+    "build": "pnpm exec tsx ./scripts/build.ts",
+    "type-check": "pnpm exec tsx ./scripts/type-check.ts",
+    "test": "pnpm exec tsx ./test/test.ts"
+  },
+  "files": [
+    "release/**/*",
+    "dist/**/*",
+    "build/**/*",
+    "src/**/*",
+    "scripts/**/*",
+    "public/**/*",
+    "docs/**/*",
+    "bin/**/*",
+    "typings/**/*"
+  ],
+  "peerDependencies": {
+    "typescript": "*"
+  },
+  "devDependencies": {
+    "@types/node": "^18.11.9",
+    "esbuild": "^0.15.13",
+    "tsx": "^3.11.0",
+    "typescript": "*"
+  }
+}
