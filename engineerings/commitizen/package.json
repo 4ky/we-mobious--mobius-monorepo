@@ -1,7 +1,7 @@
 {
   "name": "@we-mobius/commitizen",
   "type": "module",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "keywords": [
     "mobius",
     "git",
@@ -52,7 +52,8 @@
     "cz": "./bin/cz.cjs"
   },
   "scripts": {
-    "build": "pnpm exec tsx ./scripts/build.ts"
+    "build": "pnpm exec tsx ./scripts/build.ts",
+    "type-check": "pnpm exec tsx ./scripts/type-check.ts"
   },
   "files": [
     "release/**/*",
@@ -76,6 +77,7 @@
   "devDependencies": {
     "@types/inquirer": "^9.0.3",
     "@types/node": "^18.11.9",
+    "@we-mobius/type-check": "workspace:*",
     "esbuild": "^0.15.14",
     "tsx": "^3.12.1"
   }

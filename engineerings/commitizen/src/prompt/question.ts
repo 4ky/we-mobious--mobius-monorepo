@@ -53,8 +53,6 @@ export const getQuestions = (commitizenConfig: CommitizenConfig, InquirerInstanc
 
   const { messages } = preparedCommitizenConfig
 
-  messages.ticketNumber = messages.ticketNumberPattern ?? messages.ticketNumber
-
   let questions: Array<DistinctQuestion<Prepared<Answers>> & { name: string }> = [
     {
       type: 'list',
