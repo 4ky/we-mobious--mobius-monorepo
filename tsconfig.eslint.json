@@ -12,6 +12,7 @@
     "components/**/*"
   ],
   "exclude": [
+    "**/bin",
     "**/node_modules",
     "**/dist",
     "**/build",
