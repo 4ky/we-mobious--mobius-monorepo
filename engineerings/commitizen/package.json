@@ -1,7 +1,7 @@
 {
   "name": "@we-mobius/commitizen",
   "type": "module",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "keywords": [
     "mobius",
     "git",
@@ -49,7 +49,7 @@
   },
   "bin": {
     "commit": "./bin/commit.js",
-    "cmt": "./bin/cmt.cjs"
+    "cz": "./bin/cz.cjs"
   },
   "scripts": {
     "build": "pnpm exec tsx ./scripts/build.ts"

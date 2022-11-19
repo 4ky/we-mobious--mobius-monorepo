@@ -212,6 +212,6 @@
   "cSpell.diagnosticLevel": "Hint",
   "grammarly.config.documentDialect": "auto-text",
   "grammarly.config.documentDomain": "general",
-  "grammarly.files.include": ["**/README.md", "**/readme.md", "**/*.txt"],
+  "grammarly.files.include": ["**/README.md", "**/readme.md", "**/*.txt", "**/*.md"],
   "grammarly.files.exclude": ["**/node_modules/**"]
 }
