@@ -22,9 +22,9 @@
     "graph:all": "pnpm exec nx graph",
     "graph:watch": "pnpm exec nx graph --watch",
     "reset": "pnpm exec nx reset",
+    "type-check:all": "pnpm exec nx run-many --target=type-check --all --parallel",
     "lint": "pnpm exec eslint .",
-    "lint:fix": "pnpm exec eslint . --fix --ignore-path .gitignore",
-    "type-check": "pnpm --filter \"*\" run type-check"
+    "lint:fix": "pnpm exec eslint . --fix --ignore-path .gitignore"
   },
   "dependencies": {
     "@we-mobius/mobius-utils": "^1.8.1"

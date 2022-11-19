@@ -1,4 +1,4 @@
 #!/usr/bin/env sh
 . "$(dirname -- "$0")/_/husky.sh"
 
-pnpm run type-check && pnpm run lint
+pnpm run type-check:all && pnpm run lint

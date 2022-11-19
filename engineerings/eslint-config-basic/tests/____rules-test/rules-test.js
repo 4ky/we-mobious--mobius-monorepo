@@ -1,7 +1,7 @@
 /** ------------------------------------------------------------------------
  **                  import recommended rules applied tests
  *------------------------------------------------------------------------**/
-import { default as add } from './add'
+import { default as add } from './____add'
 
 add(1, 2)
 

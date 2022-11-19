@@ -27,14 +27,20 @@
   },
   "targetDefaults": {
     "dev": {
-      "dependsOn": [{"target": "build", "projects": "dependencies"}]
+      "dependsOn": [{"target": "build", "projects": "dependencies"}],
+      "outputs": ["{projectRoot}/dev"]
     },
     "build": {
       "dependsOn": [{"target": "build", "projects": "dependencies"}],
       "outputs": ["{projectRoot}/dist"]
     },
+    "type-check": {
+      "dependsOn": [],
+      "outputs": []
+    },
     "test": {
-      "dependsOn": [{"target": "build", "projects": "self"}]
+      "dependsOn": [{"target": "build", "projects": "self"}],
+      "outputs": []
     }
   },
   "pluginsConfig": {
@@ -52,6 +58,7 @@
       "options": {
         "cacheableOperations": [
           "build",
+          "type-check",
           "lint",
           "test"
         ],
