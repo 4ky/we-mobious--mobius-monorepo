@@ -133,7 +133,6 @@
     "lib": [
       "DOM",
       "DOM.Iterable",
-      "ES2016",
       "ESNext"
     ],                                                   /* Specify a set of bundled library declaration files that describe the target runtime environment. */
     "moduleDetection": "auto",

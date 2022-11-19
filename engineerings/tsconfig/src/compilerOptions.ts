@@ -193,7 +193,6 @@ export const DEFAULT_COMPILER_OPTIONS: CompilerOptions = {
   lib: [
     'DOM',
     'DOM.Iterable',
-    'ES2016',
     'ESNext'
   ],
   moduleDetection: ts.ModuleDetectionKind.Auto,

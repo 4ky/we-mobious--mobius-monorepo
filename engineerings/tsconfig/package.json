@@ -8,18 +8,23 @@
   ],
   "typings": "./src/index.ts",
   "types": "./src/index.ts",
-  "main": "./dist/main.js",
-  "module": "./dist/main.js",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
   "exports": {
     ".": {
-      "require": "./dist/main.cjs",
-      "import": "./dist/main.js",
-      "default": "./dist/main.js"
+      "require": "./dist/index.cjs",
+      "import": "./dist/index.js",
+      "default": "./dist/index.js"
     },
     "./index": {
       "require": "./dist/index.cjs",
       "import": "./dist/index.js",
       "default": "./dist/index.js"
+    },
+    "./main": {
+      "require": "./dist/main.cjs",
+      "import": "./dist/main.js",
+      "default": "./dist/main.js"
     },
     "./ts": "./src/index.ts",
     "./package.json": "./package.json",
@@ -30,7 +35,8 @@
     "./tsconfig.commonjs.json": "./tsconfig.commonjs.json"
   },
   "scripts": {
-    "build": "pnpm exec tsx ./scripts/build.ts"
+    "build": "pnpm exec tsx ./scripts/build.ts",
+    "type-check": "pnpm exec tsx ./scripts/type-check.ts"
   },
   "files": [
     "./tsconfig.base.json",
@@ -60,6 +66,7 @@
     }
   },
   "devDependencies": {
+    "@we-mobius/type-check": "workspace:*",
     "esbuild": "^0.15.14",
     "tsx": "^3.12.1",
     "typescript": "*"
