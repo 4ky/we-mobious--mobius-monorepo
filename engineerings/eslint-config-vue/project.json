@@ -24,6 +24,21 @@
         "commands": ["pnpm run build"],
         "parallel": false
       }
+    },
+    "type-check": {
+      "executor": "nx:run-commands",
+      "inputs": [
+        {"runtime": "node -v"},
+        {"input": "all", "projects": "self"},
+        {"input": "all", "projects": "dependencies"}
+      ],
+      "outputs": [],
+      "dependsOn": [],
+      "options": {
+        "cwd": "engineerings/eslint-config-vue",
+        "commands": ["pnpm run type-check"],
+        "parallel": true
+      }
     }
   }
 }
