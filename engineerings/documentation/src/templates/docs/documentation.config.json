@@ -1,0 +1,190 @@
+{
+  "docs": {
+    "english": {
+      "path": "./english",
+      "children": {
+        "overview": {
+          "path": "./overview.md"
+        },
+        "code-of-conduct": {
+          "path": "./code-of-conduct.md"
+        },
+        "blueprint": {
+          "path": "./blueprint.md"
+        },
+        "roadmap": {
+          "path": "./roadmap.md"
+        },
+        "changelog": {
+          "path": "./changelog.md"
+        },
+        "getting-started": {
+          "path": "./getting-started.md"
+        },
+        "beginner-tutorial": {
+          "path": "./beginner-tutorial.md"
+        },
+        "user-handbook": {
+          "path": "./user-handbook.md"
+        },
+        "program-reference": {
+          "path": "./program-reference.md"
+        },
+        "development-guide": {
+          "path": "./development-guide.md"
+        },
+        "system-architecture": {
+          "path": "./system-architecture.md"
+        },
+        "work-conventions": {
+          "path": "./work-conventions.md",
+          "children": {
+            "structure-conventions": {
+              "path": "./structure-conventions.md"
+            },
+            "code-conventions": {
+              "path": "./code-conventions.md"
+            },
+            "document-conventions": {
+              "path": "./document-conventions.md"
+            },
+            "branch-conventions": {
+              "path": "./branch-conventions.md"
+            },
+            "commit-conventions": {
+              "path": "./commit-conventions.md"
+            },
+            "version-conventions": {
+              "path": "./version-conventions.md"
+            }
+          }
+        },
+        "quality-assurance": {
+          "path": "./quality-assurance.md"
+        },
+        "project-management": {
+          "path": "./project-management.md",
+          "children": {
+            "role-management": {
+              "path": "./role-management.md"
+            },
+            "issue-management": {
+              "path": "./issue-management.md"
+            },
+            "pull-request-management": {
+              "path": "./pull-request-management.md"
+            },
+            "release-management": {
+              "path": "./release-management.md"
+            },
+            "security-management": {
+              "path": "./security-management.md"
+            },
+            "workflow-management": {
+              "path": "./workflow-management.md"
+            }
+          }
+        },
+        "contributing-guidelines": {
+          "path": "./contributing-guidelines.md"
+        },
+        "support": {
+          "path": "./support.md"
+        }
+      }
+    },
+    "chinese": {
+      "path": "./chinese",
+      "children": {
+        "概述": {
+          "path": "./概述.md"
+        },
+        "行为准则": {
+          "path": "./行为准则.md"
+        },
+        "蓝图": {
+          "path": "./蓝图.md"
+        },
+        "路线图": {
+          "path": "./路线图.md"
+        },
+        "变更日志": {
+          "path": "./变更日志.md"
+        },
+        "入门向导": {
+          "path": "./入门向导.md"
+        },
+        "新手教程": {
+          "path": "./新手教程.md"
+        },
+        "用户手册": {
+          "path": "./用户手册.md"
+        },
+        "程序参考": {
+          "path": "./程序参考.md"
+        },
+        "开发指南": {
+          "path": "./开发指南.md"
+        },
+        "系统架构": {
+          "path": "./系统架构.md"
+        },
+        "工作约定": {
+          "path": "./工作约定.md",
+          "children": {
+            "结构约定": {
+              "path": "./结构约定.md"
+            },
+            "代码约定": {
+              "path": "./代码约定.md"
+            },
+            "文档约定": {
+              "path": "./文档约定.md"
+            },
+            "分支约定": {
+              "path": "./分支约定.md"
+            },
+            "提交约定": {
+              "path": "./提交约定.md"
+            },
+            "版本约定": {
+              "path": "./版本约定.md"
+            }
+          }
+        },
+        "质量保证": {
+          "path": "./质量保证.md"
+        },
+        "项目管理": {
+          "path": "./项目管理.md",
+          "children": {
+            "角色管理": {
+              "path": "./角色管理.md"
+            },
+            "议题管理": {
+              "path": "./议题管理.md"
+            },
+            "拉取请求管理": {
+              "path": "./拉取请求管理.md"
+            },
+            "发布管理": {
+              "path": "./发布管理.md"
+            },
+            "安全管理": {
+              "path": "./安全管理.md"
+            },
+            "工作流管理": {
+              "path": "./工作流管理.md"
+            }
+          }
+        },
+        "贡献指南": {
+          "path": "./贡献指南.md"
+        },
+        "获取帮助": {
+          "path": "./获取帮助.md"
+        }
+      }
+    }
+  }
+}
