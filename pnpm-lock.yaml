@@ -65,7 +65,7 @@ importers:
   engineerings/documentation:
     specifiers:
       '@types/node': ^18.11.9
-      '@we-mobius/type-check': workspace:^
+      '@we-mobius/type-check': workspace:*
       esbuild: ^0.15.13
       tsx: ^3.11.0
       typescript: '*'

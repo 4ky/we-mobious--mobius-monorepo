@@ -1,1 +1,7 @@
 # Blueprint
+
+## Motivation
+
+## Vision
+
+## Planning
