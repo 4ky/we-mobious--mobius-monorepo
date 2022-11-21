@@ -1,3 +1,8 @@
 **/____*
 **/____*/**/*
 **/bin/**/*
+
+# import typescript as dependency, too slow to check
+**/type-check/src/**/*.ts
+# `*.target.ts` in test folder is intended to have errors
+**/type-check/test/*.target.ts
