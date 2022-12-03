@@ -247,8 +247,8 @@ export const DEFAULT_TYPES: Type[] = [
     emoji: '🗑'
   },
   {
-    value: 'WIP',
-    name: 'WIP:      Work in progress',
+    value: 'wip',
+    name: 'wip:      Work in progress',
     emoji: '🚧'
   }
 ]
