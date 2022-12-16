@@ -71,7 +71,7 @@
     "vue-eslint-parser": "^9.1.0"
   },
   "devDependencies": {
-    "@types/node": "^18.8.3",
+    "@types/node": "^18.11.15",
     "@we-mobius/type-check": "workspace:*",
     "esbuild": "^0.15.10",
     "tsx": "^3.9.0",

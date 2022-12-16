@@ -35,7 +35,7 @@
     "@nrwl/eslint-plugin-nx": "^15.0.13",
     "@nrwl/js": "^15.0.13",
     "@nrwl/nx-cloud": "^14.7.0",
-    "@types/node": "^18.8.2",
+    "@types/node": "^18.11.15",
     "@we-mobius/commitizen": "workspace:*",
     "@we-mobius/eslint-config-basic": "workspace:*",
     "@we-mobius/eslint-config-typescript": "workspace:*",
