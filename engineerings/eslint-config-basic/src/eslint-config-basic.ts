@@ -1,6 +1,5 @@
 import { eslintCommentsPlugins, eslintCommentsRules } from './config-parts/eslint-comments.config-parts'
 import { htmlPlugins, htmlOverride } from './config-parts/html.config-parts'
-import { javascriptInHTMLPlugins, javascriptInHTMLSettings } from './config-parts/javascript-in-html.config-parts'
 import { javascriptInMarkdownPlugins, markdownProcessorOverride, javascriptInMarkdownOverride } from './config-parts/javascript-in-markdown.config-parts'
 import { javascriptSettings, javascriptParserOptions, javascriptPlugins, javascriptOverride } from './config-parts/javascript.config-parts'
 import { jsonPlugins, jsonOverride } from './config-parts/json.config-parts'
@@ -31,7 +30,7 @@ export const basicESLintConfig = {
   // @see https://eslint.org/docs/latest/user-guide/configuring/language-options#specifying-parser-options
   parserOptions: javascriptParserOptions,
   // @see https://eslint.org/docs/latest/user-guide/configuring/configuration-files#adding-shared-settings
-  settings: { ...javascriptSettings, ...javascriptInHTMLSettings },
+  settings: { ...javascriptSettings },
   // @see https://eslint.org/docs/latest/user-guide/configuring/rules
   rules: { ...eslintCommentsRules },
   overrides: [
@@ -45,7 +44,7 @@ export const basicESLintConfig = {
   // @see https://eslint.org/docs/latest/user-guide/configuring/plugins
   plugins: [
     ...eslintCommentsPlugins, ...javascriptPlugins,
-    ...jsonPlugins, ...javascriptInHTMLPlugins, ...htmlPlugins, ...javascriptInMarkdownPlugins,
+    ...jsonPlugins, ...htmlPlugins, ...javascriptInMarkdownPlugins,
     ...nxPlugins
   ],
   // @see https://eslint.org/docs/latest/user-guide/configuring/ignoring-code
