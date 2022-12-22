@@ -2,7 +2,9 @@ import { typescriptParserOptions, typescriptPlugins, typescriptRules } from '@we
 
 export const vueParserOptions = {
   parser: {
-    js: 'espree',
+    // @see https://github.com/vuejs/vue-eslint-parser/issues/104#issuecomment-909082288
+    // @see https://github.com/vuejs/vue-eslint-parser/issues/104#issuecomment-909191552
+    js: '@typescript-eslint/parser',
     ts: '@typescript-eslint/parser',
     '<template>': 'espree'
   },
