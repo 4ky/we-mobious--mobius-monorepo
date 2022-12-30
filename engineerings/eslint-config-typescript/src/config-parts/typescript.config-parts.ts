@@ -301,7 +301,7 @@ export const typescriptRulesFromMobius = {
   '@typescript-eslint/unified-signatures': ['off'],
   '@typescript-eslint/no-unsafe-assignment': ['off'],
   'dot-notation': ['off'],
-  '@typescript-eslint/no-empty-interface': ['warn', { allowSingleExtends: false }]
+  '@typescript-eslint/no-empty-interface': ['warn', { allowSingleExtends: true }]
 }
 
 export const typescriptRules = {
