@@ -10,12 +10,12 @@
     "build": {
       "executor": "nx:run-commands",
       "inputs": [
-        {"runtime": "node -v"},
-        {"input": "dev", "projects": "self"},
-        {"input": "all", "projects": "dependencies"}
+        { "runtime": "node -v" },
+        { "input": "dev", "projects": "self" },
+        { "input": "all", "projects": "dependencies" }
       ],
       "outputs": ["{projectRoot}/dist"],
-      "dependsOn": [{"target": "build", "projects": "dependencies"}],
+      "dependsOn": [{ "target": "build", "projects": "dependencies" }],
       "options": {
         "cwd": "engineerings/documentation",
         "commands": ["pnpm run build"],
@@ -26,9 +26,9 @@
   "type-check": {
     "executor": "nx:run-commands",
     "inputs": [
-      {"runtime": "node -v"},
-      {"input": "all", "projects": "self"},
-      {"input": "all", "projects": "dependencies"}
+      { "runtime": "node -v" },
+      { "input": "all", "projects": "self" },
+      { "input": "all", "projects": "dependencies" }
     ],
     "outputs": [],
     "dependsOn": [],
