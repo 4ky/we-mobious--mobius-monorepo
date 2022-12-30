@@ -1,4 +1,4 @@
-import { javascriptPlugins, javascriptRules, javascriptRulesFromStandard } from '@we-mobius/eslint-config-basic/ts'
+import { javascriptPlugins, javascriptRules, javascriptRulesFromStandard, javascriptRulesFromMobius } from '@we-mobius/eslint-config-basic/ts'
 
 /**
  * @see https://github.com/typescript-eslint/typescript-eslint/blob/main/packages/parser/README.md
@@ -146,7 +146,7 @@ export const typescriptRulesFromTypeScriptESLint = {
   '@typescript-eslint/unified-signatures': ['warn']
 }
 
-const equivalents = [
+const equivalentsBetweenTypeScriptESLintRulesAndJavaScriptRulesFromStandard = [
   'comma-spacing',
   'dot-notation',
   'brace-style',
@@ -187,12 +187,12 @@ export const typescriptRulesFromESLintConfigStandardWithTypeScript = {
   'no-undef': ['off'],
 
   // Rules replaced by @typescript-eslint versions:
-  ...fromEntries(equivalents.map((name) => [name, 'off'])),
+  ...fromEntries(equivalentsBetweenTypeScriptESLintRulesAndJavaScriptRulesFromStandard.map((name) => [name, 'off'])),
   camelcase: ['off'],
   'no-use-before-define': ['off'],
 
   // @typescript-eslint versions of Standard.js rules:
-  ...fromEntries(equivalents.map((name) => [`@typescript-eslint/${name}`, javascriptRulesFromStandard[name]])),
+  ...fromEntries(equivalentsBetweenTypeScriptESLintRulesAndJavaScriptRulesFromStandard.map((name) => [`@typescript-eslint/${name}`, javascriptRulesFromStandard[name]])),
   '@typescript-eslint/no-use-before-define': ['error', {
     functions: false,
     classes: false,
@@ -291,16 +291,26 @@ export const typescriptRulesFromImport = {
   'import/named': 'off'
 }
 
+export const equivalentsBetweenTypeScriptESLintRulesAndJavaScriptRulesFromMobius = [
+  'no-unused-vars'
+] as const
+export const typescriptRulesFromMobius = {
+  ...fromEntries(equivalentsBetweenTypeScriptESLintRulesAndJavaScriptRulesFromMobius.map((name) => [name, 'off'])),
+  ...fromEntries(equivalentsBetweenTypeScriptESLintRulesAndJavaScriptRulesFromMobius.map((name) => [`@typescript-eslint/${name}`, javascriptRulesFromMobius[name]])),
+  '@typescript-eslint/no-non-null-assertion': ['off'],
+  '@typescript-eslint/unified-signatures': ['off'],
+  '@typescript-eslint/no-unsafe-assignment': ['off'],
+  'dot-notation': ['off']
+}
+
 export const typescriptRules = {
   ...typescriptRulesFromJavaScript,
   ...typescriptRulesFromTypeScriptESLintESLintRecommended,
   ...typescriptRulesFromTypeScriptESLint,
   ...typescriptRulesFromESLintConfigStandardWithTypeScript,
   ...typescriptRulesFromImport,
-  '@typescript-eslint/no-non-null-assertion': ['off'],
-  '@typescript-eslint/unified-signatures': ['off'],
-  '@typescript-eslint/no-unsafe-assignment': ['off'],
-  'dot-notation': ['off']
+  ...typescriptRulesFromMobius
+
 }
 export const typescriptSettings = {
   'import/extensions': ['.ts', '.mts', '.cts', '.tsx', '.js', '.mjs', '.cjs', '.jsx'],

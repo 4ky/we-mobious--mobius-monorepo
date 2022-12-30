@@ -464,6 +464,27 @@ export const javascriptRulesFromPromise = {
   // 'promise/no-multiple-resolved': ['error']
 }
 
+export const javascriptRulesFromMobius = {
+  'no-unused-vars': ['error', {
+    // @see https://eslint.org/docs/latest/rules/no-unused-vars#vars
+    vars: 'all',
+    // @see https://eslint.org/docs/latest/rules/no-unused-vars#varsignorepattern
+    varsIgnorePattern: '^_',
+    // @see https://eslint.org/docs/latest/rules/no-unused-vars#args
+    args: 'all',
+    // @see https://eslint.org/docs/latest/rules/no-unused-vars#argsignorepattern
+    argsIgnorePattern: '^_',
+    // @see https://eslint.org/docs/latest/rules/no-unused-vars#caughterrors
+    caughtErrors: 'all',
+    // @see https://eslint.org/docs/latest/rules/no-unused-vars#caughterrorsignorepattern
+    caughtErrorsIgnorePattern: '^_',
+    // @see https://eslint.org/docs/latest/rules/no-unused-vars#destructuredarrayignorepattern
+    destructuredArrayIgnorePattern: '^_',
+    // @see https://eslint.org/docs/latest/rules/no-unused-vars#ignorerestsiblings
+    ignoreRestSiblings: true
+  }]
+}
+
 export const javascriptPlugins = ['import', 'n', 'promise']
 export const javascriptRules = {
   ...javascriptRulesFromESLint,
@@ -471,6 +492,7 @@ export const javascriptRules = {
   ...javascriptRulesFromImport,
   ...javascriptRulesFromN,
   ...javascriptRulesFromPromise,
+  ...javascriptRulesFromMobius,
   ...nxRules
 }
 export const javascriptSettings = {
