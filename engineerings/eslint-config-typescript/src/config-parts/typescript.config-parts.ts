@@ -300,7 +300,8 @@ export const typescriptRulesFromMobius = {
   '@typescript-eslint/no-non-null-assertion': ['off'],
   '@typescript-eslint/unified-signatures': ['off'],
   '@typescript-eslint/no-unsafe-assignment': ['off'],
-  'dot-notation': ['off']
+  'dot-notation': ['off'],
+  '@typescript-eslint/no-empty-interface': ['warn', { allowSingleExtends: false }]
 }
 
 export const typescriptRules = {
