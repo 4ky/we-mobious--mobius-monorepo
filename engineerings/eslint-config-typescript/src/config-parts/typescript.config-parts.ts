@@ -301,7 +301,11 @@ export const typescriptRulesFromMobius = {
   '@typescript-eslint/unified-signatures': ['off'],
   '@typescript-eslint/no-unsafe-assignment': ['off'],
   'dot-notation': ['off'],
-  '@typescript-eslint/no-empty-interface': ['warn', { allowSingleExtends: true }]
+  '@typescript-eslint/no-empty-interface': ['warn', { allowSingleExtends: true }],
+  // @see https://typescript-eslint.io/rules/require-await/
+  // @see https://eslint.org/docs/rules/require-await
+  // @see https://typescript-eslint.io/rules/promise-function-async/
+  '@typescript-eslint/require-await': ['off']
 }
 
 export const typescriptRules = {
