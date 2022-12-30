@@ -139,12 +139,9 @@ export const vueRecommendedRules = {
   'vue/order-in-components': ['warn'],
   'vue/this-in-template': ['warn']
 }
-export const vueRules = {
-  ...typescriptRules,
-  ...vueBaseRules,
-  ...vueEssentialRules,
-  ...vueStronglyRecommendedRules,
-  ...vueRecommendedRules,
+export const mobiusRecommendedRules = {
+  'vue/first-attribute-linebreak': ['warn', { singleline: 'beside', multiline: 'below' }],
+  'vue/max-attributes-per-line': ['warn', { singleline: { max: 5 }, multiline: { max: 5 } }],
   'vue/html-self-closing': [
     'error',
     {
@@ -157,6 +154,16 @@ export const vueRules = {
       math: 'always'
     }
   ]
+}
+
+export const vueRules = {
+  ...typescriptRules,
+  ...vueBaseRules,
+  ...vueEssentialRules,
+  ...vueStronglyRecommendedRules,
+  ...vueRecommendedRules,
+  ...mobiusRecommendedRules
+
 }
 export const vueSettings = {}
 export const vueOverride = {
