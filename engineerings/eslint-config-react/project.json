@@ -1,0 +1,44 @@
+{
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "name": "eslint-config-react",
+  "root": "engineerings/eslint-config-react",
+  "sourceRoot": "engineerings/eslint-config-react/src",
+  "tags": [
+    "scope:engineering-eslint-config-react",
+    "type:engineering"
+  ],
+  "implicitDependencies": [],
+  "namedInputs": {},
+  "targets": {
+    "build": {
+      "executor": "nx:run-commands",
+      "inputs": [
+        { "runtime": "node -v" },
+        { "input": "all", "projects": "self" },
+        { "input": "all", "projects": "dependencies" }
+      ],
+      "outputs": ["{projectRoot}/dist"],
+      "dependsOn": [{ "target": "build", "projects": "dependencies" }],
+      "options": {
+        "cwd": "engineerings/eslint-config-react",
+        "commands": ["pnpm run build"],
+        "parallel": false
+      }
+    },
+    "type-check": {
+      "executor": "nx:run-commands",
+      "inputs": [
+        { "runtime": "node -v" },
+        { "input": "all", "projects": "self" },
+        { "input": "all", "projects": "dependencies" }
+      ],
+      "outputs": [],
+      "dependsOn": [],
+      "options": {
+        "cwd": "engineerings/eslint-config-react",
+        "commands": ["pnpm run type-check"],
+        "parallel": true
+      }
+    }
+  }
+}
