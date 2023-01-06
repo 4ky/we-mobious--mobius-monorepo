@@ -73,7 +73,7 @@ export const reactBaseRules = {
   }],
   /**
    * @see {@link https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/hook-use-state.md}
-   * @todo Until 2023-01-6 with eslint-plugin-react 7.31.11, the option `allowDestructuredState` is not supported.
+   * @todo Until 2023-01-06 with eslint-plugin-react 7.31.11, the option `allowDestructuredState` is not supported.
    */
   // 'react/hook-use-state': ['error', { allowDestructuredState: true }],
   'react/hook-use-state': ['error'],
@@ -343,8 +343,9 @@ export const reactBaseRules = {
   'react/no-namespace': ['error'],
   /**
    * @see {@link https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/no-object-type-as-default-prop.md}
+   * @todo Until 2023-01-06 with eslint-plugin-react 7.31.11, this rule is not available.
    */
-  'react/no-object-type-as-default-prop': ['error'],
+  // 'react/no-object-type-as-default-prop': ['error'],
   /**
    * @see {@link https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/no-redundant-should-component-update.md}
    */
@@ -483,8 +484,9 @@ export const reactBaseRules = {
   }],
   /**
    * @see {@link https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/sort-default-props.md}
+   * @todo Until 2023-01-06 with eslint-plugin-react 7.31.11, this rule is not available.
    */
-  'react/sort-default-props': ['off', { ignoreCase: true }],
+  // 'react/sort-default-props': ['off', { ignoreCase: true }],
   /**
    * @see {@link https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/sort-prop-types.md}
    */
@@ -541,11 +543,23 @@ export const reactRules = {
   ...reactHooksRules,
   ...mobiusRecommendedRules
 }
-export const reactSettings = {}
+export const reactSettings = {
+  react: {
+    createClass: 'createReactClass', // Regex for Component Factory to use,
+    // default to "createReactClass"
+    pragma: 'React', // Pragma to use, default to "React"
+    fragment: 'Fragment', // Fragment to use (may be a property of <pragma>), default to "Fragment"
+    version: 'detect' // React version. "detect" automatically picks the version you have installed.
+    // You can also use `16.0`, `16.3`, etc, if you want to override the detected value.
+    // It will default to "latest" and warn if missing, and to "detect" in the future
+    // "flowVersion": "0.53" // Flow version
+  }
+}
 export const reactOverride = {
-  files: ['*.{jsx,mjsx,tsx,mtsx}'],
+  files: ['*.jsx', '*.cjsx', '*.mjsx', '*.tsx', '.ctsx', '*.mtsx'],
   extends: [],
   plugins: [...reactPlugins],
+  parser: '@typescript-eslint/parser',
   parserOptions: reactParserOptions,
   rules: { ...reactRules }
 }
