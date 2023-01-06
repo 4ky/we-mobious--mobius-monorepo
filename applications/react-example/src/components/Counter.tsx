@@ -1,7 +1,7 @@
 import { useState } from 'react'
 
-import { Count } from 'Elements/Count'
-import { add, stepNumber } from 'Services/math'
+import { Count } from '../elements/Count'
+import { add, stepNumber } from '../services/math'
 
 export const Counter = (): JSX.Element => {
   const [count, setCount] = useState(0)
