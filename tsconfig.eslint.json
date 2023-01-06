@@ -1,15 +1,25 @@
 {
   "extends": "./tsconfig.json",
   "include": [
+    "*.ts",
     "src/**/*",
+    "src/**/*.vue",
     "packages/**/*",
+    "packages/**/*.vue",
     "utilities/**/*",
+    "utilities/**/*.vue",
     "features/**/*",
+    "features/**/*.vue",
     "applications/**/*",
+    "applications/**/*.vue",
     "engineerings/**/*",
+    "engineerings/**/*.vue",
     "elements/**/*",
+    "elements/**/*.vue",
     "services/**/*",
-    "components/**/*"
+    "services/**/*.vue",
+    "components/**/*",
+    "components/**/*.vue"
   ],
   "exclude": [
     "**/bin",
