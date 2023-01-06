@@ -1,0 +1,44 @@
+{
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "name": "react-example",
+  "root": "applications/react-example",
+  "sourceRoot": "applications/react-example/src",
+  "tags": [
+    "scope:application-react-example",
+    "type:application"
+  ],
+  "implicitDependencies": [],
+  "namedInputs": {},
+  "targets": {
+    "build": {
+      "executor": "nx:run-commands",
+      "inputs": [
+        { "runtime": "node -v" },
+        { "input": "all", "projects": "self" },
+        { "input": "all", "projects": "dependencies" }
+      ],
+      "outputs": ["{projectRoot}/dist"],
+      "dependsOn": [{ "target": "build", "projects": "dependencies" }],
+      "options": {
+        "cwd": "applications/react-example",
+        "commands": ["pnpm run build"],
+        "parallel": false
+      }
+    },
+    "type-check": {
+      "executor": "nx:run-commands",
+      "inputs": [
+        { "runtime": "node -v" },
+        { "input": "all", "projects": "self" },
+        { "input": "all", "projects": "dependencies" }
+      ],
+      "outputs": [],
+      "dependsOn": [],
+      "options": {
+        "cwd": "applications/react-example",
+        "commands": ["pnpm run type-check"],
+        "parallel": true
+      }
+    }
+  }
+}

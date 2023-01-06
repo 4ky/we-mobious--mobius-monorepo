@@ -1,0 +1,74 @@
+{
+  "$schema": "../node_modules/@tauri-apps/cli/schema.json",
+  "build": {
+    "beforeBuildCommand": "pnpm run build",
+    "beforeDevCommand": "pnpm run dev",
+    "devPath": "http://localhost:5238",
+    "distDir": "../dist"
+  },
+  "package": {
+    "productName": "React Example",
+    "version": "0.1.0"
+  },
+  "tauri": {
+    "allowlist": {
+      "all": true
+    },
+    "bundle": {
+      "active": true,
+      "category": "Open Source",
+      "copyright": "Mobius",
+      "deb": {
+        "depends": []
+      },
+      "externalBin": [],
+      "icon": [
+        "icons/planet-matrix/planet-matrix__logo.png",
+        "icons/planet-matrix/favicon/planet-matrix__favicon.ico"
+      ],
+      "identifier": "com.mobius.react-example",
+      "longDescription": "",
+      "macOS": {
+        "entitlements": null,
+        "exceptionDomain": "",
+        "frameworks": [],
+        "providerShortName": null,
+        "signingIdentity": null
+      },
+      "resources": [],
+      "shortDescription": "",
+      "targets": "all",
+      "windows": {
+        "webviewInstallMode": {
+          "type": "downloadBootstrapper"
+        },
+        "certificateThumbprint": null,
+        "digestAlgorithm": "sha256",
+        "timestampUrl": "",
+        "wix": {
+          "language": "zh-CN"
+        }
+      }
+    },
+    "security": {
+      "csp": null
+    },
+    "updater": {
+      "active": false
+    },
+    "windows": [
+      {
+        "fullscreen": false,
+        "center": true,
+        "resizable": true,
+        "title": "React Example",
+        "minWidth": 1440,
+        "minHeight": 900,
+        "maxWidth": 1920,
+        "maxHeight": 1080,
+        "maximized": true,
+        "focus": true
+      }
+    ]
+  }
+}
