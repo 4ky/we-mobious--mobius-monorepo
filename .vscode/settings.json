@@ -42,32 +42,23 @@
   "files.insertFinalNewline": true,
   "files.trimTrailingWhitespace": true,
   "files.trimFinalNewlines": true,
-  "[markdown]": {
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "[prisma]": {
+    "editor.defaultFormatter": "Prisma.prisma"
+  },
+  "[vue]": {
+    // "editor.defaultFormatter": "Vue.volar"
     "editor.defaultFormatter": "dbaeumer.vscode-eslint"
   },
-  "[html]": {
-    // "editor.defaultFormatter": "vscode.html-language-features"
-    "editor.defaultFormatter": "dbaeumer.vscode-eslint",
-    "editor.autoClosingBrackets": "always"
+  "[yaml]": {
+    "editor.defaultFormatter": "redhat.vscode-yaml",
+    "editor.tabSize": 2
   },
-  "[javascript]": {
-    "editor.defaultFormatter": "dbaeumer.vscode-eslint",
-    "editor.autoClosingBrackets": "always"
+  "[haskell]": {
+    "editor.defaultFormatter": "vigoo.stylish-haskell"
   },
-  "[typescript]": {
-    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
-  },
-  "[json]": {
-    "editor.defaultFormatter": "dbaeumer.vscode-eslint",
-    "editor.autoClosingBrackets": "always"
-  },
-  "[jsonc]": {
-    "editor.defaultFormatter": "dbaeumer.vscode-eslint",
-    "editor.autoClosingBrackets": "always"
-  },
-  "[json5]": {
-    "editor.defaultFormatter": "dbaeumer.vscode-eslint",
-    "editor.autoClosingBrackets": "always"
+  "[handlebars]": {
+    "editor.defaultFormatter": "vscode.html-language-features"
   },
   "[css]": {
     "editor.defaultFormatter": "vscode.css-language-features"
@@ -78,33 +69,57 @@
   "[postcss]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "[handlebars]": {
-    "editor.defaultFormatter": "vscode.html-language-features"
+  "[html]": {
+    // "editor.defaultFormatter": "vscode.html-language-features"
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+    "editor.autoClosingBrackets": "always"
   },
-  "[haskell]": {
-    "editor.defaultFormatter": "vigoo.stylish-haskell"
+  "[markdown]": {
+    "editor.defaultFormatter": "yzhang.markdown-all-in-one"
   },
-  "[yaml]": {
-    "editor.defaultFormatter": "redhat.vscode-yaml",
-    "editor.tabSize": 2
+  "[javascript]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+    "editor.autoClosingBrackets": "always"
   },
-  "[prisma]": {
-    "editor.defaultFormatter": "Prisma.prisma"
-  },
-  "[vue]": {
-    // "editor.defaultFormatter": "Vue.volar"
+  "[javascriptreact]": {
     "editor.defaultFormatter": "dbaeumer.vscode-eslint"
   },
-  "javascript.updateImportsOnFileMove.enabled": "always",
-  "eslint.format.enable": true,
+  "[typescript]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+    "editor.autoClosingBrackets": "always"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+    "editor.autoClosingBrackets": "always"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "vscode.json-language-features",
+    "editor.autoClosingBrackets": "always"
+  },
+  "[json5]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+    "editor.autoClosingBrackets": "always"
+  },
   "eslint.alwaysShowStatus": true,
+  "eslint.format.enable": true,
   "eslint.validate": [
     {
       "language": "javascript",
       "autoFix": true
     },
     {
+      "language": "javascriptreact",
+      "autoFix": true
+    },
+    {
       "language": "typescript",
+      "autoFix": true
+    },
+    {
+      "language": "typescriptreact",
       "autoFix": true
     },
     {
