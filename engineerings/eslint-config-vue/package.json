@@ -1,7 +1,7 @@
 {
   "name": "@we-mobius/eslint-config-vue",
   "type": "module",
-  "version": "0.0.12",
+  "version": "0.0.13",
   "keywords": [
     "mobius",
     "eslint",
@@ -74,7 +74,6 @@
     "@types/node": "^18.11.15",
     "@we-mobius/type-check": "workspace:*",
     "esbuild": "^0.15.10",
-    "tsx": "^3.9.0",
-    "vue": "^3.2.40"
+    "tsx": "^3.9.0"
   }
 }
