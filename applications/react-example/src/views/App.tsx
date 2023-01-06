@@ -1,6 +1,6 @@
 import { StrictMode } from 'react'
 
-import { Counter } from 'Components/Counter'
+import { Counter } from '../components/Counter'
 
 export const Example = (): JSX.Element => <div>This is, in fact, a div!</div>
 
