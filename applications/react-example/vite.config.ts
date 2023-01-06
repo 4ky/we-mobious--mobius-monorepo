@@ -3,10 +3,9 @@ import { fileURLToPath, URL } from 'node:url'
 
 import react from '@vitejs/plugin-react'
 import { defineConfig, loadEnv } from 'vite'
+import WindiCSS from 'vite-plugin-windicss'
 
-// import { presetIcons } from '@unocss/preset-icons'
-// import { presetWind } from '@unocss/preset-wind'
-// import Unocss from '@unocss/vite'
+import { makeWindiConfig } from './windi.config'
 
 import type { UserConfigExport } from 'vite'
 
@@ -23,10 +22,15 @@ const viteConfig: UserConfigExport = defineConfig((configEnv) => {
     // https://vitejs.dev/config/#envdir
     envDir: '../',
     plugins: [
-      // Unocss({
-      //   presets: [presetWind(), presetIcons() as any]
-      // })
-      react()
+      react(),
+      WindiCSS({
+        config: makeWindiConfig({ customRoot: '' }),
+        onOptionsResolved: (resolvedOptions) => {
+          console.log('[vite-plugin-windicss] resolvedOptions:')
+          console.log('resolvedOptions.root', resolvedOptions.root)
+          console.log('resolvedOptions.config', JSON.stringify(resolvedOptions.config, null, 2))
+        }
+      })
     ],
     resolve: {
       // https://vitejs.dev/config/#resolve-alias

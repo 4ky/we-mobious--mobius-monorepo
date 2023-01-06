@@ -14,7 +14,7 @@ export const Counter = (): JSX.Element => {
     <div>
       <Count count={ count } />
 
-      <button type="button" onClick={ handleIncrement }>Increment</button>
+      <button className='bg-red-500' type="button" onClick={ handleIncrement }>Increment</button>
     </div>
   )
 }

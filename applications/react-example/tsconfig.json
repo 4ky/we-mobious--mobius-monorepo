@@ -2,8 +2,11 @@
   "extends": "@we-mobius/tsconfig/tsconfig.monorepo.json",
   "compilerOptions": {
     "baseUrl": ".",
-    "rootDir": "./src",
-    "types": ["node", "react"],
+    "rootDir": ".",
+    "types": [
+      "node",
+      "react"
+    ],
     "paths": {
       "@/*": ["./*"],
       "Src/*": ["./src/*"],
@@ -16,7 +19,12 @@
       "Services/*": ["./src/services/*"]
     }
   },
-  "include": ["src/**/*"],
+  "include": [
+    "src/**/*",
+    "env.d.ts",
+    "vite.config.ts",
+    "windi.config.ts"
+  ],
   "exclude": [
     "**/node_modules",
     "**/bin",
