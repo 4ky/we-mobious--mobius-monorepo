@@ -6,10 +6,7 @@ export const Count = (props: CountElementProps) => {
   const { count } = props
   return (
     <p>
-      Count:
-      { ' ' }
-
-      { count }
+      Count: { count }
     </p>
   )
 }
