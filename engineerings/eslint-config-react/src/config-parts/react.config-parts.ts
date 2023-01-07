@@ -534,7 +534,17 @@ export const reactHooksRules = {
   'react-hooks/exhaustive-deps': ['warn']
 }
 
-export const mobiusRecommendedRules = {}
+export const mobiusRecommendedRules = {
+  /**
+   * @see {@link https://typescript-eslint.io/rules/explicit-function-return-type/}
+   * @see {@link https://github.com/typescript-eslint/typescript-eslint/blob/main/packages/eslint-plugin/docs/rules/explicit-function-return-type.md}
+   *
+   * '.tsx' (or '.jsx', '.cjsx', etc.) files are not checked for return types.
+   * These files are expected to only contain Functional Component themselves.
+   * Always explicitly write the return type is not necessary and can be annoying.
+   */
+  '@typescript-eslint/explicit-function-return-type': ['off']
+}
 
 export const reactRules = {
   ...typescriptRules,
