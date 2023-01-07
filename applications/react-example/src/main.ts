@@ -1,13 +1,8 @@
 
 // eslint-disable-next-line import/no-unassigned-import -- import css
 import './statics/styles/reset.css'
-// import 'virtual:windi.css'
 // eslint-disable-next-line import/no-unassigned-import -- import css
-import 'virtual:windi-base.css'
-// eslint-disable-next-line import/no-unassigned-import -- import css
-import 'virtual:windi-components.css'
-// eslint-disable-next-line import/no-unassigned-import -- import css
-import 'virtual:windi-utilities.css'
+import 'virtual:uno.css'
 // eslint-disable-next-line import/no-unassigned-import -- import css
 import './statics/styles/styles.css'
 
