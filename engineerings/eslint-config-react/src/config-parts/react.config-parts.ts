@@ -171,8 +171,10 @@ export const reactBaseRules = {
   }],
   /**
    * @see {@link https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/jsx-newline.md}
+   *
+   * Ugly, determined by the developer to be better than the forced newline.
    */
-  'react/jsx-newline': ['error', { prevent: false }],
+  'react/jsx-newline': ['off'],
   /**
    * @see {@link https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/jsx-no-bind.md}
    */
