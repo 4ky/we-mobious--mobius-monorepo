@@ -17,7 +17,8 @@
       "Components/*": ["./src/components/*"],
       "Views/*": ["./src/views/*"],
       "Services/*": ["./src/services/*"]
-    }
+    },
+    "preserveSymlinks": true
   },
   "include": [
     "src/**/*",
