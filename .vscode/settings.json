@@ -25,8 +25,6 @@
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true
   },
-  "editor.bracketPairColorization.enabled": true,
-  "editor.guides.bracketPairs": "active",
   "files.associations": {
     "*.cjson": "jsonc",
     "*.wxss": "css",
