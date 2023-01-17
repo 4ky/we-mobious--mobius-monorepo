@@ -1,8 +1,9 @@
 import { StrictMode } from 'react'
+import {
+  RouterProvider
+} from 'react-router-dom'
 
-import { Counter } from '../components/Counter'
-
-export const Example = () => <div>This is, in fact, a div!</div>
+import router from '../router'
 
 export const App = () => {
   return (
@@ -10,9 +11,7 @@ export const App = () => {
      * @see {@link https://beta.reactjs.org/reference/react/StrictMode#strictmode}
      */
     <StrictMode>
-      <Example />
-
-      <Counter />
+      <RouterProvider router={ router } />
     </StrictMode>
   )
 }
