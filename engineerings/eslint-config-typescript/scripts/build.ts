@@ -21,6 +21,7 @@ const buildConfig = (): void => {
     return `${text.slice(953, -91)}\rmodule.exports = config_default;`
   }
 
+  mkdirSync(dirname(path), { recursive: true })
   writeFileSync(path, transformText(text))
 }
 buildConfig()

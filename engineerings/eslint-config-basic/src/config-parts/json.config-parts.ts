@@ -33,12 +33,7 @@ export const jsonRules = {
   'jsonc/valid-json-number': ['error'],
   'jsonc/vue-custom-block/no-parsing-error': ['error'],
   // jsonc:Extension Rules
-  'jsonc/array-bracket-newline': ['error',
-    {
-      multiline: true,
-      minItems: null
-    }
-  ],
+  'jsonc/array-bracket-newline': ['error', 'consistent'],
   'jsonc/array-bracket-spacing': ['error', 'never'],
   'jsonc/array-element-newline': ['off'],
   'jsonc/comma-dangle': ['error'],
