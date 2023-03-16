@@ -1,7 +1,7 @@
 {
   "name": "@we-mobius/eslint-config-typescript",
   "type": "module",
-  "version": "0.0.11",
+  "version": "0.0.12",
   "keywords": [
     "mobius",
     "eslint",
@@ -39,8 +39,12 @@
   },
   "typesVersions": {
     "*": {
-      "index": ["./src/index.ts"],
-      "ts": ["./src/index.ts"]
+      "index": [
+        "./src/index.ts"
+      ],
+      "ts": [
+        "./src/index.ts"
+      ]
     }
   },
   "scripts": {
