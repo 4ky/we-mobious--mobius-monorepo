@@ -1,8 +1,4 @@
 packages:
-  - "utilities/**"
-  - "features/**"
-  - "engineerings/**"
-  - "applications/**"
   - "elements/**"
   - "components/**"
   - "services/**"
