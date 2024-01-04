@@ -23,7 +23,7 @@
   "prettier.enable": false,
   "editor.formatOnSave": false,
   "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true
+    "source.fixAll.eslint": "explicit"
   },
   "files.associations": {
     "*.cjson": "jsonc",
@@ -176,55 +176,5 @@
     "(?::\\s*?)'([^']*)'",
     "(?::\\s*?)`([^`]*)`",
     "(?::\\s*?)\"([^\"]*)\""
-  ],
-  "cSpell.enabled": true,
-  "cSpell.language": "en",
-  "cSpell.caseSensitive": false,
-  "cSpell.customDictionaries": {
-    "project-words": {
-      "name": "project-words",
-      "path": "${workspaceRoot}/project-words.txt",
-      "description": "Words used in this project",
-      "addWords": true
-    }
-  },
-  "cSpell.showStatus": true,
-  // Specify file types to spell check.
-  "cSpell.enabledLanguageIds": [
-    "csharp",
-    "go",
-    "javascript",
-    "javascriptreact",
-    "markdown",
-    "php",
-    "plaintext",
-    "typescript",
-    "typescriptreact",
-    "yml",
-    "yaml",
-    "json",
-    "json5",
-    "jsonc",
-    "css"
-  ],
-  "cSpell.allowCompoundWords": false,
-  "cSpell.globRoot": "${workspaceFolder}",
-  "cSpell.ignorePaths": [
-    "node_modules",        // this will ignore anything the node_modules directory
-    "**/node_modules",     // the same for this one
-    "**/node_modules/**",  // the same for this one
-    "node_modules/**",     // Doesn't currently work due to how the current working directory is determined.
-    "vscode-extension",    //
-    ".git",                // Ignore the .git directory
-    "*.dll",               // Ignore all .dll files.
-    "**/*.dll",             // Ignore all .dll files
-    "package-lock.json",
-    ".vscode",
-    ".vscode-insiders"
-  ],
-  "cSpell.diagnosticLevel": "Hint",
-  "grammarly.config.documentDialect": "auto-text",
-  "grammarly.config.documentDomain": "general",
-  "grammarly.files.include": ["**/README.md", "**/readme.md", "**/*.txt", "**/*.md"],
-  "grammarly.files.exclude": ["**/node_modules/**"]
+  ]
 }
