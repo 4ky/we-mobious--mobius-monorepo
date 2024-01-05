@@ -1,0 +1,107 @@
+{
+  "name": "@we-mobius/eslint-config",
+  "type": "module",
+  "version": "0.0.1",
+  "keywords": [
+    "mobius",
+    "eslint",
+    "eslintconfig",
+    "eslint-config",
+    "typescript",
+    "vue",
+    "react"
+  ],
+  "typings": "./src/index.ts",
+  "types": "./src/index.ts",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "exports": {
+    ".": {
+      "require": "./dist/index.cjs",
+      "import": "./dist/index.js",
+      "default": "./dist/index.js"
+    },
+    "./index": {
+      "require": "./dist/index.cjs",
+      "import": "./dist/index.js",
+      "default": "./dist/index.js"
+    },
+    "./main": {
+      "require": "./dist/main.cjs",
+      "import": "./dist/main.js",
+      "default": "./dist/main.js"
+    },
+    "./config": {
+      "require": "./dist/config.cjs",
+      "import": "./dist/config.js",
+      "default": "./dist/config.js"
+    },
+    "./ts": "./src/index.ts",
+    "./package.json": "./package.json"
+  },
+  "typesVersions": {
+    "*": {
+      "index": [
+        "./src/index.ts"
+      ],
+      "ts": [
+        "./src/index.ts"
+      ]
+    }
+  },
+  "scripts": {
+    "build": "pnpm exec tsx ./scripts/build.ts",
+    "type-check": "pnpm exec tsx ./scripts/type-check.ts"
+  },
+  "files": [
+    "release/**/*",
+    "dist/**/*",
+    "build/**/*",
+    "src/**/*",
+    "scripts/**/*",
+    "public/**/*",
+    "docs/**/*",
+    "bin/**/*",
+    "typings/**/*"
+  ],
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org"
+  },
+  "peerDependencies": {
+    "eslint": ">= 8.0.0"
+  },
+  "dependencies": {
+    "@html-eslint/parser": "^0.22.0",
+    "@nrwl/eslint-plugin-nx": "^17.2.8",
+    "@typescript-eslint/eslint-plugin": "^6.17.0",
+    "@typescript-eslint/parser": "^6.17.0",
+    "eslint-config-standard": "^17.1.0",
+    "eslint-config-standard-with-typescript": "^43.0.0",
+    "eslint-import-resolver-typescript": "^3.6.1",
+    "eslint-plugin-eslint-comments": "^3.2.0",
+    "eslint-plugin-html": "^7.1.0",
+    "eslint-plugin-import": "npm:eslint-plugin-i@^2.29.1",
+    "eslint-plugin-jsonc": "^2.11.2",
+    "eslint-plugin-markdown": "^3.0.1",
+    "eslint-plugin-markdownlint": "^0.5.0",
+    "eslint-plugin-n": "^16.6.1",
+    "eslint-plugin-promise": "^6.1.1",
+    "eslint-plugin-react": "^7.33.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.5",
+    "eslint-plugin-vue": "^9.19.2",
+    "eslint-processor-vue-blocks": "^0.1.1",
+    "espree": "^9.6.1",
+    "globals": "^13.24.0",
+    "jsonc-eslint-parser": "^2.4.0",
+    "vue-eslint-parser": "^9.3.2"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.6",
+    "@we-mobius/tsconfig": "workspace:^",
+    "@we-mobius/type-check": "workspace:*",
+    "esbuild": "^0.19.11",
+    "tsx": "^4.7.0"
+  }
+}
