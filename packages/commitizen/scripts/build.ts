@@ -87,7 +87,8 @@ const buildAdapter = (): void => {
   const { path, text } = code.outputFiles[0]!
 
   const transformText = (text: string): string => {
-    return `${text.slice(1269, -220)}\rmodule.exports = app;`
+    return `${text.slice(1553, -130)}\rmodule.exports = app;`
+    // return text
   }
 
   writeFileSync(path, transformText(text))

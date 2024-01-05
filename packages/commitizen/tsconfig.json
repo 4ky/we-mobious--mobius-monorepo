@@ -1,0 +1,10 @@
+{
+  "extends": "@we-mobius/tsconfig/tsconfig.base.json",
+  "compilerOptions": {
+    "rootDir": "."
+  },
+  "include": [
+    "src/**/*",
+    "scripts/**/*"
+  ]
+}

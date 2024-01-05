@@ -43,8 +43,12 @@
   },
   "typesVersions": {
     "*": {
-      "index": ["./src/index.ts"],
-      "ts": ["./src/index.ts"]
+      "index": [
+        "./src/index.ts"
+      ],
+      "ts": [
+        "./src/index.ts"
+      ]
     }
   },
   "bin": {
@@ -71,14 +75,15 @@
     "registry": "https://registry.npmjs.org"
   },
   "dependencies": {
-    "commitizen": "^4.2.5",
-    "inquirer": "^9.1.4"
+    "commitizen": "^4.3.0",
+    "inquirer": "^9.2.12"
   },
   "devDependencies": {
-    "@types/inquirer": "^9.0.3",
-    "@types/node": "^18.11.9",
+    "@types/inquirer": "^9.0.7",
+    "@types/node": "^20.10.6",
+    "@we-mobius/tsconfig": "workspace:^",
     "@we-mobius/type-check": "workspace:*",
-    "esbuild": "^0.15.14",
-    "tsx": "^3.12.1"
+    "esbuild": "^0.19.11",
+    "tsx": "^4.7.0"
   }
 }
