@@ -4,7 +4,7 @@ import eslintPluginPromise from 'eslint-plugin-promise'
 import * as espree from 'espree'
 import globals from 'globals'
 
-import type { LanguageOptions, Plugins, Rules, FlatConfigItem } from '../types'
+import type { LanguageOptions, Plugins, Rules, FlatConfigItem, Settings } from '../types'
 
 export const javascriptLanguageOptions: LanguageOptions = {
   ecmaVersion: 'latest',
@@ -34,6 +34,15 @@ export const javascriptPlugins: Plugins = {
   import: eslintPluginImport,
   promise: eslintPluginPromise,
   n: eslintPluginN
+}
+
+export const javascriptSettings: Settings = {
+  'import/parsers': {
+    espree: ['.js', '.mjs', '.cjs']
+  },
+  'import/resolver': {
+    node: { extensions: ['.js', '.mjs', '.cjs'] }
+  }
 }
 
 /**
@@ -526,13 +535,6 @@ export const javascript: FlatConfigItem = {
   ignores: [],
   languageOptions: javascriptLanguageOptions,
   plugins: javascriptPlugins,
-  settings: {
-    'import/parsers': {
-      espree: ['.js', '.mjs', '.cjs']
-    },
-    'import/resolver': {
-      node: { extensions: ['.js', '.mjs', '.cjs'] }
-    }
-  },
+  settings: javascriptSettings,
   rules: javascriptRules
 }

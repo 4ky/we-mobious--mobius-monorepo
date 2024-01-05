@@ -1,9 +1,9 @@
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any -- necessary
+// eslint-disable-next-line typescript/no-explicit-any -- necessary
 type AnyFunction = (...args: any[]) => any
 export type IsFunction<T> = T extends AnyFunction ? true : false
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any -- necessary
+// eslint-disable-next-line typescript/no-explicit-any -- necessary
 export type AnyRecord = Record<string | number | symbol, any>
 export type IsRecord<T> = T extends AnyRecord ? true : false
 

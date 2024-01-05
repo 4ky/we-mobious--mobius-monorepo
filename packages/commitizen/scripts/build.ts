@@ -9,22 +9,12 @@ const buildIndex = (): void => {
     bundle: true,
     define: {},
     format: 'esm',
-    minify: true,
+    minify: false,
     outfile: 'dist/index.js',
     platform: 'node',
-    banner: {
-      js: `
-    import { createRequire } from 'module';
-    const require = createRequire(import.meta.url);
-    import path from "path";
-    import { fileURLToPath } from "url";
-    const __filename = fileURLToPath(import.meta.url);
-    const __dirname = path.dirname(__filename);
-    `
-    },
     splitting: false,
     write: false,
-    external: ['typescript']
+    external: ['commitizen', 'inquirer']
   })
   const { path, text } = code.outputFiles[0]!
 
@@ -43,22 +33,12 @@ const buildMain = (): void => {
     bundle: true,
     define: {},
     format: 'esm',
-    minify: true,
+    minify: false,
     outfile: 'dist/main.js',
     platform: 'node',
-    banner: {
-      js: `
-    import { createRequire } from 'module';
-    const require = createRequire(import.meta.url);
-    import path from "path";
-    import { fileURLToPath } from "url";
-    const __filename = fileURLToPath(import.meta.url);
-    const __dirname = path.dirname(__filename);
-    `
-    },
     splitting: false,
     write: false,
-    external: ['typescript']
+    external: ['commitizen', 'inquirer']
   })
   const { path, text } = code.outputFiles[0]!
 

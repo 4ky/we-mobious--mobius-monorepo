@@ -1,13 +1,14 @@
 #!/usr/bin/env node
 // @see https://github.com/commitizen/cz-cli#commitizen-for-multi-repo-projects
-"use strict";
+'use strict'
 
-const path = require('path');
 const fs = require('fs')
-const bootstrap = require('commitizen/dist/cli/git-cz').bootstrap;
+const path = require('path')
+
+const bootstrap = require('commitizen/dist/cli/git-cz').bootstrap
 
 const findCommitizenPathUpwards = (() => {
-  const checkedPaths = new Set();
+  const checkedPaths = new Set()
   const internalFindCommitizenPathUpwards = (startPath) => {
     if (checkedPaths.has(startPath)) {
       return internalFindCommitizenPathUpwards(path.resolve(startPath, '..'))
@@ -41,11 +42,10 @@ const findCommitizenPathUpwards = (() => {
   return internalFindCommitizenPathUpwards
 })()
 
-
 bootstrap({
   // cliPath: path.resolve(__filename, '../../node_modules/commitizen'),
   cliPath: findCommitizenPathUpwards(__filename),
   config: {
-    "path": "@we-mobius/commitizen/adapter"
+    path: '@we-mobius/commitizen/adapter'
   }
-});
+})

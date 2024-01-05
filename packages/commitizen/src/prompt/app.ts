@@ -3,6 +3,8 @@ import { readFileSync, mkdirSync, writeFileSync, rmSync } from 'node:fs'
 import { tmpdir } from 'node:os'
 import { resolve } from 'node:path'
 
+import inquirer from 'inquirer'
+
 import { edit } from '../utils/index'
 import { logger } from '../utils/logger'
 
@@ -11,7 +13,6 @@ import { buildCommit } from './build-commit'
 import { getQuestions } from './question'
 
 import type { CommitizenConfig } from './basic'
-import type inquirer from 'inquirer'
 
 export const app = {
   prompter: (InquirerInstance: typeof inquirer, commit: (message: string) => void) => {

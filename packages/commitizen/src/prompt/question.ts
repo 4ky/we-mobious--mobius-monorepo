@@ -3,8 +3,8 @@ import { getPreparedCommit, logger } from '../utils/index'
 import { Context, prepareCommitizenConfig, DEFAULT_ANSWERS } from './basic'
 import { buildCommit } from './build-commit'
 
-import type { Prepared } from '../utils/index'
 import type { Answers, CommitizenConfig } from './basic'
+import type { Prepared } from '../utils/index'
 import type inquirer from 'inquirer'
 import type { QuestionCollection, DistinctQuestion } from 'inquirer'
 

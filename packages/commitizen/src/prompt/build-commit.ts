@@ -2,8 +2,8 @@ import { wrapWord } from '../utils/index'
 
 import { prepareCommitizenConfig, prepareAnswers } from './basic'
 
-import type { Prepared } from '../utils/index'
 import type { CommitizenConfig, Answers } from './basic'
+import type { Prepared } from '../utils/index'
 
 const addType = (type: string, preparedCommitizenConfig: Prepared<CommitizenConfig>): string => {
   const { lowerCaseType, typePrefix, typeSuffix } = preparedCommitizenConfig

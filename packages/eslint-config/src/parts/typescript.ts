@@ -21,6 +21,11 @@ export const typescriptLanguageOptions: LanguageOptions = {
       globalReturn: false
     },
     ecmaVersion: 'latest',
+    /**
+     * Note: 注意 `sourceType` 并不是 `@typescript-eslint/parser` 的选项，而是 `espree` 的选项。
+     *       此处 `parserOptions` 是所有有可能被使用的 `parser` 的选项的并集。
+     */
+    sourceType: 'module',
     emitDecoratorMetadata: undefined,
     extraFileExtensions: undefined,
     jsDocParsingMode: 'none',
@@ -39,8 +44,17 @@ export const typescriptPlugins: Plugins = {
 
 export const typescriptSettings: Settings = {
   'import/external-module-folders': ['node_modules'],
+  /**
+   * @see https://github.com/import-js/eslint-plugin-import/blob/main/utils/parse.js
+   */
   'import/parsers': {
-    '@typescript-eslint/parser': ['.ts', '.mts', '.cts', '.d.ts', '.d.mts', '.d.cts']
+    '@typescript-eslint/parser': ['.ts', '.mts', '.cts', '.d.ts', '.d.mts', '.d.cts'],
+    /**
+     * Note: 即使是为 TypeScript 定制的规则，也需要添加 `expree` 作为 `parser`，
+     *       因为 `eslint-plugin-import` 的部分规则会分析依赖，而即使是 TypeScript 项目，
+     *       来自 `node_modules` 的依赖也经常是 `.js` 文件。
+     */
+    espree: ['.js', '.mjs', '.cjs']
   },
   'import/resolver': {
     node: {

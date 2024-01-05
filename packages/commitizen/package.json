@@ -81,6 +81,7 @@
   "devDependencies": {
     "@types/inquirer": "^9.0.7",
     "@types/node": "^20.10.6",
+    "@we-mobius/eslint-config": "workspace:^",
     "@we-mobius/tsconfig": "workspace:^",
     "@we-mobius/type-check": "workspace:*",
     "esbuild": "^0.19.11",
