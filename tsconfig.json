@@ -1,34 +1,9 @@
 {
-  "extends": "@we-mobius/tsconfig/tsconfig.monorepo.json",
+  "extends": "@we-mobius/tsconfig/tsconfig.base.json",
   "compilerOptions": {
-    "rootDir": ".",
-    "rootDirs": [
-      "packages/**/src",
-      "elements/**/src",
-      "services/**/src",
-      "components/**/src"
-    ],
-    "types": ["node"]
+    "rootDir": "."
   },
   "include": [
-    "*.ts",
-    "src/**/*",
-    "src/**/*.vue",
-    "packages/**/*",
-    "packages/**/*.vue",
-    "elements/**/*",
-    "elements/**/*.vue",
-    "services/**/*",
-    "services/**/*.vue",
-    "components/**/*",
-    "components/**/*.vue"
-  ],
-  "exclude": [
-    "**/node_modules",
-    "**/bin",
-    "**/dist",
-    "**/build",
-    "**/dev",
-    "**/release"
+    "**/*.ts"
   ]
 }

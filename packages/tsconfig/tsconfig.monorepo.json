@@ -3,14 +3,7 @@
   "compilerOptions": {
     "rootDir": ".",
     "rootDirs": [
-      "packages/**/src",
-      "utilities/**/src",
-      "features/**/src",
-      "applications/**/src",
-      "engineerings/**/src",
-      "elements/**/src",
-      "services/**/src",
-      "components/**/src"
+      "packages/**/src"
     ]
   }
 }

@@ -66,8 +66,6 @@
     "emitBOM": false,                                    /* Emit a UTF-8 Byte Order Mark (BOM) in the beginning of output files. */
     "emitDeclarationOnly": false,                        /* Only output d.ts files and not JavaScript files. */
     "importHelpers": true,                               /* Allow importing helper functions from tslib once per project, instead of including them per-file. */
-    // Enforce using `import type` instead of `import` for types
-    "importsNotUsedAsValues": "error",                   /* Specify emit/checking behavior for imports that are only used for types */
     "inlineSourceMap": true,                             /* Include sourcemap files inside the emitted JavaScript. */
     "inlineSources": true,                               /* Include source code in the sourcemaps inside the emitted JavaScript. */
     "mapRoot": "",                                       /* Specify the location where debugger should locate map files instead of generated locations. */
@@ -78,9 +76,6 @@
     "outDir": "./.mobius/.temp/transpiled",              /* Specify an output folder for all emitted files. */
     //  "outFile": "",                                       /* Specify a file that bundles all outputs into one JavaScript file. If `declaration` is true, also designates a file that bundles all .d.ts output. */
     "preserveConstEnums": true,                          /* Disable erasing `const enum` declarations in generated code. */
-    // For `<script setup>`
-    // See <https://devblogs.microsoft.com/typescript/announcing-typescript-4-5-beta/#preserve-value-imports>
-    "preserveValueImports": true,
     "removeComments": false,                             /* Disable emitting comments. */
     // "sourceMap": true,                                   /* Create source map files for emitted JavaScript files. */
     "sourceRoot": "",                                    /* Specify the root path for debuggers to find the reference source code. */
@@ -110,6 +105,7 @@
     "isolatedModules": true,                             /* Ensure that each file can be safely transpiled without relying on other imports. */
     // NOTE: when working with pnpm, preserveSymlinks should be set to false.
     "preserveSymlinks": false,                           /* Disable resolving symlinks to their realpath. This correlates to the same flag in node. */
+    "verbatimModuleSyntax": true,
 
     /*************************************************************************************************************
      *                                                 Backwards Compatibility
@@ -221,14 +217,7 @@
      * .d.ts 和 .js 的生成使用 typescript compile API 自定义
      */
     "src/**/*",
-    "packages/**/*",
-    "utilities/**/*",
-    "features/**/*",
-    "applications/**/*",
-    "engineerings/**/*",
-    "elements/**/*",
-    "services/**/*",
-    "components/**/*"
+    "packages/**/*"
   ],
   "exclude": [
     "**/node_modules",

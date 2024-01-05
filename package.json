@@ -38,6 +38,7 @@
     "@nrwl/nx-cloud": "^16.5.2",
     "@types/node": "^20.10.6",
     "@we-mobius/commitizen": "workspace:*",
+    "@we-mobius/eslint-config": "workspace:*",
     "@we-mobius/eslint-config-all": "workspace:*",
     "@we-mobius/eslint-config-basic": "workspace:*",
     "@we-mobius/eslint-config-react": "workspace:*",

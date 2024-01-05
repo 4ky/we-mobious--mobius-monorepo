@@ -1,30 +1,6 @@
 {
-  "explorer.fileNesting.enabled": true,
-  "explorer.fileNesting.expand": false,
-  // Inspired by antfu's config, see: https://github.com/antfu/vscode-file-nesting-config
-  // "explorer.fileNesting.patterns": {
-  //   ".gitignore": ".gitattributes, .gitmodules, .gitmessage, .mailmap, .git-blame*",
-  //   "dockerfile": ".dockerignore, docker-compose.*, dockerfile*",
-  //   "readme*": "LICENSE, project-words.txt, authors, backers*, changelog*, citation*, code_of_conduct*, codeowners, contributing*, contributors, copying, credits, governance.md, history.md, license*, maintainers, readme*, security.md, sponsors*",
-  //   "package.json": ".npmrc, .npmignore, package-lock.json, yarn.lock",
-  //   "pnpm-workspace.yaml": "nx.json, .nxignore, pnpm-lock.yaml",
-  //   "tsconfig.json": "tsconfig.*.json",
-  //   ".eslint*": ".editorconfig, .eslintignore, .commitlintrc.json, .czrc",
-  //   ".env": "*.env, .env.*, .envrc, env.d.ts",
-  //   "*.ts": "${capture}.js",
-  //   "*.js": "${capture}.js.map, ${capture}.min.js, ${capture}.d.ts",
-  //   "*.jsx": "${capture}.js",
-  //   "*.tsx": "${capture}.ts",
-  //   "index.ts": "index.*.ts",
-  //   "main.ts": "main.*.ts"
-  // },
   "explorer.incrementalNaming": "smart",
   "editor.tabSize": 2,
-  "prettier.enable": false,
-  "editor.formatOnSave": false,
-  "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": "explicit"
-  },
   "files.associations": {
     "*.cjson": "jsonc",
     "*.wxss": "css",
@@ -41,11 +17,48 @@
   "files.trimTrailingWhitespace": true,
   "files.trimFinalNewlines": true,
   "javascript.updateImportsOnFileMove.enabled": "always",
+
+
+  // Disable the default formatter, use eslint instead
+  "prettier.enable": false,
+  "editor.formatOnSave": false,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit"
+    // "source.organizeImports": "explicit"
+  },
+  "eslint.enable": true,
+  "eslint.debug": true,
+  // Enable the ESlint flat config support
+  "eslint.experimental.useFlatConfig": true,
+  "eslint.probe": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact",
+    "html",
+    "vue",
+    "markdown",
+    "json",
+    "jsonc",
+    "json5"
+  ],
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact",
+    "html",
+    "vue",
+    "markdown",
+    "json",
+    "jsonc",
+    "json5"
+  ],
+  "eslint.format.enable": true,
   "[prisma]": {
     "editor.defaultFormatter": "Prisma.prisma"
   },
   "[vue]": {
-    // "editor.defaultFormatter": "Vue.volar"
     "editor.defaultFormatter": "dbaeumer.vscode-eslint"
   },
   "[yaml]": {
@@ -68,12 +81,11 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[html]": {
-    // "editor.defaultFormatter": "vscode.html-language-features"
     "editor.defaultFormatter": "dbaeumer.vscode-eslint",
     "editor.autoClosingBrackets": "always"
   },
   "[markdown]": {
-    "editor.defaultFormatter": "yzhang.markdown-all-in-one"
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
   },
   "[javascript]": {
     "editor.defaultFormatter": "dbaeumer.vscode-eslint",
@@ -94,57 +106,20 @@
     "editor.autoClosingBrackets": "always"
   },
   "[jsonc]": {
-    "editor.defaultFormatter": "vscode.json-language-features",
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint",
     "editor.autoClosingBrackets": "always"
   },
   "[json5]": {
     "editor.defaultFormatter": "dbaeumer.vscode-eslint",
     "editor.autoClosingBrackets": "always"
   },
-  "eslint.alwaysShowStatus": true,
-  "eslint.format.enable": true,
-  "eslint.validate": [
+  "eslint.workingDirectories": [
     {
-      "language": "javascript",
-      "autoFix": true
-    },
-    {
-      "language": "javascriptreact",
-      "autoFix": true
-    },
-    {
-      "language": "typescript",
-      "autoFix": true
-    },
-    {
-      "language": "typescriptreact",
-      "autoFix": true
-    },
-    {
-      "language": "json",
-      "autoFix": true
-    },
-    {
-      "language": "jsonc",
-      "autoFix": true
-    },
-    {
-      "language": "json5",
-      "autoFix": true
-    },
-    {
-      "language": "html",
-      "autoFix": true
-    },
-    {
-      "language": "markdown",
-      "autoFix": false
-    },
-    {
-      "language": "vue",
-      "autoFix": true
+      "pattern": "./packages/*/"
     }
   ],
+
+
   "tailwindCSS.includeLanguages": {
     "typescript": "html",
     "javascript": "html",
