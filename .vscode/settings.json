@@ -19,6 +19,7 @@
   "javascript.updateImportsOnFileMove.enabled": "always",
 
   "editor.linkedEditing": true,
+  "typescript.preferences.preferTypeOnlyAutoImports": true,
 
   // Disable the default formatter, use eslint instead
   "prettier.enable": false,
