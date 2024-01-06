@@ -201,7 +201,6 @@ export const vueRules: Rules = {
 
 export const vueWithTypescript: FlatConfigItem = {
   files: ['**/*.vue'],
-  ignores: [],
   languageOptions: vueWithTypescriptLanguageOptions,
   processor: vueEslintPlugin.processors['.vue'],
   plugins: vueWithTypescriptPlugins,

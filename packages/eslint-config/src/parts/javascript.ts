@@ -532,7 +532,6 @@ export const javascriptRules: Rules = {
 
 export const javascript: FlatConfigItem = {
   files: ['**/*.js', '**/*.mjs', '**/*.cjs'],
-  ignores: [],
   languageOptions: javascriptLanguageOptions,
   plugins: javascriptPlugins,
   settings: javascriptSettings,

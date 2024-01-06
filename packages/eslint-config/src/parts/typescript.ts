@@ -403,7 +403,6 @@ export const typescriptRules = {
 
 export const typescript: FlatConfigItem = {
   files: ['**/*.ts', '**/*.mts', '**/*.cts', '**/*.d.ts', '**/*.d.mts', '**/*.d.cts'],
-  ignores: [],
   languageOptions: typescriptLanguageOptions,
   plugins: typescriptPlugins,
   settings: typescriptSettings,

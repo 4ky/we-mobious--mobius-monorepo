@@ -1,3 +1,12 @@
-import { eslintConfig } from '@we-mobius/eslint-config'
+import { eslintConfig, globalIgnores } from '@we-mobius/eslint-config'
 
-export default eslintConfig
+const [_, ...rules] = eslintConfig
+
+const customEslintConfig = [
+  {
+    ignores: [...globalIgnores.ignores, 'tests/incorrect-cases/']
+  },
+  ...rules
+]
+
+export default customEslintConfig

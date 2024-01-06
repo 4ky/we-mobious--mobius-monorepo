@@ -7,13 +7,8 @@ import type { FlatConfigItem } from '../types'
  */
 export const markdown: FlatConfigItem = {
   files: ['**/*.{md,mkdn,mdown,markdown}'],
-  ignores: [],
-  languageOptions: {},
-  linterOptions: {},
   plugins: {
     markdown: eslintPluginMarkdown
   },
-  processor: 'markdown/markdown',
-  settings: {},
-  rules: {}
+  processor: 'markdown/markdown'
 }

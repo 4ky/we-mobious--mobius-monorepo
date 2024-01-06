@@ -4,13 +4,9 @@ import type { FlatConfigItem } from '../types'
 
 export const packageJson: FlatConfigItem = {
   files: ['**/package.json'],
-  ignores: [],
-  languageOptions: {},
-  linterOptions: {},
   plugins: {
     ...jsonPlugins
   },
-  settings: {},
   rules: {
     ...jsonRules,
     'jsonc/sort-keys': [

@@ -8,15 +8,12 @@ import type { FlatConfigItem } from '../types'
  */
 export const html: FlatConfigItem = {
   files: ['**/*.html'],
-  ignores: [],
   languageOptions: {
     parser: htmlEslintParser
   },
-  linterOptions: {},
   plugins: {
     html: eslintHtmlPlugin
   },
-  settings: {},
   rules: {
     // @html-eslint:SEO
     'html/require-lang': ['error'],

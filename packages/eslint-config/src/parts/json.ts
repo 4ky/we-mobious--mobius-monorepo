@@ -65,12 +65,9 @@ export const jsonRules: FlatConfigItem['rules'] = {
  */
 export const json: FlatConfigItem = {
   files: ['**/*.json', '**/*.json5', '**/*.jsonc'],
-  ignores: [],
   languageOptions: {
     parser: jsoncEslintParser
   },
-  linterOptions: {},
   plugins: jsonPlugins,
-  settings: {},
   rules: jsonRules
 }

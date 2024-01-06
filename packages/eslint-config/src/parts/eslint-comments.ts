@@ -7,13 +7,9 @@ import type { FlatConfigItem } from '../types'
  */
 export const eslintComments: FlatConfigItem = {
   files: ['**/*'],
-  ignores: [],
-  languageOptions: {},
-  linterOptions: {},
   plugins: {
     'eslint-comments': eslintCommentsPlugin
   },
-  settings: {},
   rules: {
     'eslint-comments/disable-enable-pair': ['error', { allowWholeFile: true }],
     'eslint-comments/no-aggregating-enable': ['error'],

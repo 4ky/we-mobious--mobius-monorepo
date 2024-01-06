@@ -612,7 +612,6 @@ export const reactRules: Rules = {
 
 export const reactWithTypescript: FlatConfigItem = {
   files: ['**/*.tsx', '.ctsx', '**/*.mtsx'],
-  ignores: [],
   plugins: reactWithTypescriptPlugins,
   settings: reactWithTypeScriptSettings,
   rules: reactRules

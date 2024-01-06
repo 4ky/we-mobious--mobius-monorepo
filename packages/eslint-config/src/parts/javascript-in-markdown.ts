@@ -9,15 +9,12 @@ import type { FlatConfigItem } from '../types'
  */
 export const javascriptInMarkdown: FlatConfigItem = {
   files: ['**/*.{md,mkdn,mdown,markdown}/**/*.{js,javascript,jsx,node}'],
-  ignores: [],
   languageOptions: javascriptLanguageOptions,
-  linterOptions: {},
   plugins: {
     ...javascriptPlugins,
     markdown: eslintPluginMarkdown
   },
   processor: 'markdown/markdown',
-  settings: {},
   rules: {
     ...javascriptRules,
 
