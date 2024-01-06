@@ -12,7 +12,7 @@ pre-commit:
   commands:
     eslint:
       glob: "**/*"
-      run: pnpm eslint {staged_files} --fix && git add {staged_files}
+      run: pnpm eslint {staged_files} --fix --no-warn-ignored && git add {staged_files}
 
 commit-msg:
   scripts:
