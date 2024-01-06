@@ -18,6 +18,7 @@
   "files.trimFinalNewlines": true,
   "javascript.updateImportsOnFileMove.enabled": "always",
 
+  "editor.linkedEditing": true,
 
   // Disable the default formatter, use eslint instead
   "prettier.enable": false,
