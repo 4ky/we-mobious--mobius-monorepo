@@ -5,3 +5,6 @@
 Monorepo of Mobius Projects.
 
 - Enable `"type": "module"` in `package.json` to use ES6 modules.
+- Every package should expicitly declare its all dependencies in `package.json`, includes `@types/*`.
+
+  Why? Respect [this](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-5-1.html#explicit-typeroots-disables-upward-walks-for-node_modulestypes).
