@@ -322,7 +322,13 @@ export const typescriptRulesFromESLintConfigStandardWithTypeScript: Rules = {
   'typescript/no-var-requires': 'error',
   'typescript/prefer-function-type': 'error',
   'typescript/prefer-includes': 'error',
-  'typescript/prefer-nullish-coalescing': ['error', { ignoreConditionalTests: false, ignoreMixedLogicalExpressions: false }],
+  'typescript/prefer-nullish-coalescing': ['warn', {
+    ignoreTernaryTests: false,
+    ignoreConditionalTests: false,
+    ignoreMixedLogicalExpressions: false,
+    ignorePrimitives: false,
+    allowRuleToRunWithoutStrictNullChecksIKnowWhatIAmDoing: true
+  }],
   'typescript/prefer-optional-chain': 'error',
   'typescript/prefer-readonly': 'error',
   'typescript/prefer-reduce-type-parameter': 'error',
