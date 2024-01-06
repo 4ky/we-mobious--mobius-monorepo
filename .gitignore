@@ -8,6 +8,7 @@ typings
 .mobius
 .storage
 .nx
+.lefthook-local
 # Keep environment variables out of version control
 # .env
 

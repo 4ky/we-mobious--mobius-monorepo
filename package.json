@@ -11,7 +11,7 @@
   },
   "license": "GPL-3.0",
   "scripts": {
-    "prepare": "husky install",
+    "prepare": "lefthook install",
     "cz": "pnpm exec cz",
     "dev:all": "pnpm exec nx run-many --target=dev --all --parallel",
     "dev:affected": "pnpm exec nx affected --target=dev --all --parallel",
@@ -41,7 +41,8 @@
     "@we-mobius/eslint-config": "workspace:*",
     "@we-mobius/tsconfig": "workspace:*",
     "eslint": "^8.56.0",
-    "husky": "^8.0.3",
+    "lefthook": "^1.5.5",
+    "lint-staged": "^15.2.0",
     "nx": "^17.2.8",
     "tsx": "^4.7.0",
     "typescript": "^5.3.3"
