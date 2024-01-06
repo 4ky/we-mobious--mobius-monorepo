@@ -43,7 +43,7 @@ export const jsonRules: FlatConfigItem['rules'] = {
   'jsonc/array-element-newline': ['off'],
   'jsonc/comma-dangle': ['error'],
   'jsonc/comma-style': ['error', 'last'],
-  'jsonc/indent': javascriptRulesFromStandard.indent,
+  'jsonc/indent': javascriptRulesFromStandard['indent'],
   'jsonc/key-spacing': javascriptRulesFromStandard['key-spacing'],
   'jsonc/no-dupe-keys': ['error'],
   'jsonc/no-floating-decimal': ['error'],

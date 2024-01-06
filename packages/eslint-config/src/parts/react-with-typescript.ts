@@ -1,4 +1,3 @@
-// @ts-expect-error - no types available
 import typescriptEslintParser from '@typescript-eslint/parser'
 import reactEslintPlugin from 'eslint-plugin-react'
 import reactHooksEslintPlugin from 'eslint-plugin-react-hooks'

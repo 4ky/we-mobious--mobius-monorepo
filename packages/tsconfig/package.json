@@ -21,18 +21,10 @@
       "import": "./dist/index.js",
       "default": "./dist/index.js"
     },
-    "./main": {
-      "require": "./dist/main.cjs",
-      "import": "./dist/main.js",
-      "default": "./dist/main.js"
-    },
     "./ts": "./src/index.ts",
     "./package.json": "./package.json",
-
     "./tsconfig.json": "./tsconfig.base.json",
-    "./tsconfig.base.json": "./tsconfig.base.json",
-    "./tsconfig.monorepo.json": "./tsconfig.monorepo.json",
-    "./tsconfig.commonjs.json": "./tsconfig.commonjs.json"
+    "./tsconfig.base.json": "./tsconfig.base.json"
   },
   "scripts": {
     "build": "pnpm exec tsx ./scripts/build.ts",
@@ -40,8 +32,6 @@
   },
   "files": [
     "./tsconfig.base.json",
-    "./tsconfig.monorepo.json",
-    "./tsconfig.commonjs.json",
     "release/**/*",
     "dist/**/*",
     "build/**/*",
@@ -66,9 +56,10 @@
     }
   },
   "devDependencies": {
+    "@we-mobius/eslint-config": "workspace:^",
     "@we-mobius/type-check": "workspace:*",
-    "esbuild": "^0.15.14",
-    "tsx": "^3.12.1",
+    "esbuild": "^0.19.11",
+    "tsx": "^4.7.0",
     "typescript": "*"
   }
 }

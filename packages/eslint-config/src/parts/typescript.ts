@@ -1,5 +1,4 @@
 import typescriptEslintPlugin from '@typescript-eslint/eslint-plugin'
-// @ts-expect-error - no types available
 import typescriptEslintParser from '@typescript-eslint/parser'
 
 import { javascriptPlugins, javascriptRulesFromStandard, javascriptRulesFromMobius, javascriptRules } from './javascript'
@@ -195,7 +194,12 @@ export const typescriptRulesFromTypeScriptESLint: Rules = {
     ignoreTernaryTests: false,
     ignoreConditionalTests: false,
     ignoreMixedLogicalExpressions: false,
-    ignorePrimitives: false,
+    ignorePrimitives: {
+      bigint: false,
+      boolean: false,
+      number: false,
+      string: false
+    },
     allowRuleToRunWithoutStrictNullChecksIKnowWhatIAmDoing: true
   }],
   'typescript/prefer-optional-chain': ['warn'],
@@ -326,7 +330,12 @@ export const typescriptRulesFromESLintConfigStandardWithTypeScript: Rules = {
     ignoreTernaryTests: false,
     ignoreConditionalTests: false,
     ignoreMixedLogicalExpressions: false,
-    ignorePrimitives: false,
+    ignorePrimitives: {
+      bigint: false,
+      boolean: false,
+      number: false,
+      string: false
+    },
     allowRuleToRunWithoutStrictNullChecksIKnowWhatIAmDoing: true
   }],
   'typescript/prefer-optional-chain': 'error',

@@ -1,4 +1,3 @@
-// @ts-expect-error - no types available
 import typescriptEslintParser from '@typescript-eslint/parser'
 import vueEslintPlugin from 'eslint-plugin-vue'
 import * as espree from 'espree'
