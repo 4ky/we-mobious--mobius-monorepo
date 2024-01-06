@@ -57,7 +57,9 @@
   },
   "scripts": {
     "build": "pnpm exec tsx ./scripts/build.ts",
-    "type-check": "pnpm exec tsx ./scripts/type-check.ts"
+    "type-check": "pnpm exec tsx ./scripts/type-check.ts",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
   },
   "files": [
     "release/**/*",

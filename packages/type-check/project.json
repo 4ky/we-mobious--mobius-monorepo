@@ -1,41 +1,61 @@
 {
-  "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "name": "type-check",
-  "root": "engineerings/type-check",
-  "sourceRoot": "engineerings/type-check/src",
-  "tags": ["type:utility"],
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/type-check/src",
+  "tags": [],
   "implicitDependencies": [],
   "namedInputs": {},
   "targets": {
     "build": {
       "executor": "nx:run-commands",
       "inputs": [
-        { "runtime": "node -v" },
-        { "input": "dev", "projects": "self" },
-        { "input": "all", "projects": "dependencies" }
+        {
+          "runtime": "node -v"
+        },
+        {
+          "input": "dist-none"
+        },
+        {
+          "input": "dist-only",
+          "dependencies": true
+        }
       ],
       "outputs": ["{projectRoot}/dist"],
-      "dependsOn": [{ "target": "build", "projects": "dependencies" }],
+      "dependsOn": [
+        {
+          "target": "build",
+          "dependencies": true
+        }
+      ],
       "options": {
-        "cwd": "engineerings/type-check",
+        "cwd": "packages/type-check",
         "commands": ["pnpm run build"],
         "parallel": false
-      }
+      },
+      "cache": true
     },
     "type-check": {
       "executor": "nx:run-commands",
       "inputs": [
-        { "runtime": "node -v" },
-        { "input": "all", "projects": "self" },
-        { "input": "all", "projects": "dependencies" }
+        {
+          "runtime": "node -v"
+        },
+        {
+          "input": "dist-none"
+        },
+        {
+          "input": "dist-none",
+          "dependencies": true
+        }
       ],
       "outputs": [],
       "dependsOn": [],
       "options": {
-        "cwd": "engineerings/type-check",
+        "cwd": "packages/type-check",
         "commands": ["pnpm run type-check"],
         "parallel": true
-      }
+      },
+      "cache": true
     }
   }
 }

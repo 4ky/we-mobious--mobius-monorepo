@@ -5,7 +5,7 @@
   "description": "Type-checking support.",
   "author": {
     "name": "kongxiangyan",
-    "email": "kcigaret@outlook.com",
+    "email": "kongxiangyan@planetmatrix.tech",
     "url": "https://www.cigaret.world/"
   },
   "license": "GPL-3.0",
@@ -36,14 +36,20 @@
   },
   "typesVersions": {
     "*": {
-      "index": ["./src/index.ts"],
-      "ts": ["./src/index.ts"]
+      "index": [
+        "./src/index.ts"
+      ],
+      "ts": [
+        "./src/index.ts"
+      ]
     }
   },
   "scripts": {
     "build": "pnpm exec tsx ./scripts/build.ts",
     "type-check": "pnpm exec tsx ./scripts/type-check.ts",
-    "test": "pnpm exec tsx ./test/test.ts"
+    "test": "pnpm exec tsx ./test/test.ts",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
   },
   "files": [
     "release/**/*",
@@ -64,9 +70,11 @@
     "typescript": "*"
   },
   "devDependencies": {
-    "@types/node": "^18.11.9",
-    "esbuild": "^0.15.13",
-    "tsx": "^3.11.0",
+    "@types/node": "^20.10.6",
+    "@we-mobius/eslint-config": "workspace:^",
+    "@we-mobius/tsconfig": "workspace:^",
+    "esbuild": "^0.19.11",
+    "tsx": "^4.7.0",
     "typescript": "*"
   }
 }

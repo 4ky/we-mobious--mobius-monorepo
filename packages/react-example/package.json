@@ -6,7 +6,7 @@
   "packageManager": "pnpm@7.17.0",
   "author": {
     "name": "kongxiangyan",
-    "email": "kcigaret@outlook.com",
+    "email": "kongxiangyan@planetmatrix.tech",
     "url": "https://www.cigaret.world/"
   },
   "license": "GPL-3.0",
@@ -21,7 +21,9 @@
     "type-check": "run-p lib:type-check",
     "lib:type-check": "pnpm exec tsx ./scripts/type-check.ts",
     "analysis": "pnpm exec windicss-analysis",
-    "publish": "run-s type-check build preview"
+    "publish": "run-s type-check build preview",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
   },
   "dependencies": {
     "antd": "^5.1.5",

@@ -1,44 +1,61 @@
 {
-  "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "name": "commitizen",
-  "root": "engineerings/commitizen",
-  "sourceRoot": "engineerings/commitizen/src",
-  "tags": [
-    "scope:engineering-commitizen",
-    "type:engineering"
-  ],
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/commitizen/src",
+  "tags": [],
   "implicitDependencies": [],
   "namedInputs": {},
   "targets": {
     "build": {
       "executor": "nx:run-commands",
       "inputs": [
-        { "runtime": "node -v" },
-        { "input": "all", "projects": "self" },
-        { "input": "all", "projects": "dependencies" }
+        {
+          "runtime": "node -v"
+        },
+        {
+          "input": "dist-none"
+        },
+        {
+          "input": "dist-only",
+          "dependencies": true
+        }
       ],
       "outputs": ["{projectRoot}/dist"],
-      "dependsOn": [{ "target": "build", "projects": "dependencies" }],
+      "dependsOn": [
+        {
+          "target": "build",
+          "dependencies": true
+        }
+      ],
       "options": {
-        "cwd": "engineerings/commitizen",
+        "cwd": "packages/commitizen",
         "commands": ["pnpm run build"],
         "parallel": false
-      }
+      },
+      "cache": true
     },
     "type-check": {
       "executor": "nx:run-commands",
       "inputs": [
-        { "runtime": "node -v" },
-        { "input": "all", "projects": "self" },
-        { "input": "all", "projects": "dependencies" }
+        {
+          "runtime": "node -v"
+        },
+        {
+          "input": "dist-none"
+        },
+        {
+          "input": "dist-none",
+          "dependencies": true
+        }
       ],
       "outputs": [],
       "dependsOn": [],
       "options": {
-        "cwd": "engineerings/commitizen",
+        "cwd": "packages/commitizen",
         "commands": ["pnpm run type-check"],
         "parallel": true
-      }
+      },
+      "cache": true
     }
   }
 }

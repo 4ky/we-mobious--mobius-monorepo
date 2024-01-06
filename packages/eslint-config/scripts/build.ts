@@ -16,7 +16,7 @@ const buildIndex = (): void => {
     write: false,
     external: [
       '@html-eslint/parser',
-      '@nrwl/eslint-plugin-nx',
+      '@nx/eslint-plugin',
       '@typescript-eslint/eslint-plugin',
       '@typescript-eslint/parser',
       'eslint-config-standard',

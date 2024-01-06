@@ -1,50 +1,62 @@
 {
-  "$schema": "./node_modules/nx/schemas/nx-schema.json",
-  "npmScope": "planet-matrix",
+  "$schema": "./node_modules/nx/schemas/project-schema.json",
   "affected": {
     "defaultBase": "main"
   },
-  "workspaceLayout": {
-    "appsDir": "applications",
-    "libsDir": "packages"
-  },
-  "implicitDependencies": {
-    "package.json": {
-      "dependencies": "*",
-      "devDependencies": "*",
-      "peerDependencies": "*",
-      "scripts": "*"
-    },
-    "tsconfig.json": "*",
-    "project.json": "*",
-    "nx.json": "*"
-  },
   "namedInputs": {
     "all": ["{projectRoot}/**/*", "!{projectRoot}/node_modules/**/*"],
-    "dev": ["{projectRoot}/**/*", "!{projectRoot}/node_modules/**/*", "!{projectRoot}/dist/**/*"],
-    "dist": ["{projectRoot}/dist/**/*"],
-    "src": ["{projectRoot}/src/**/*"]
+    "dist-none": [
+      "{projectRoot}/**/*",
+      "!{projectRoot}/node_modules/**/*",
+      "!{projectRoot}/dist/**/*"
+    ],
+    "dist-only": ["{projectRoot}/dist/**/*"],
+    "src-only": ["{projectRoot}/src/**/*"]
   },
   "targetDefaults": {
     "dev": {
-      "dependsOn": [{ "target": "build", "projects": "dependencies" }],
-      "outputs": ["{projectRoot}/dev"]
+      "dependsOn": [
+        {
+          "target": "build",
+          "dependencies": true
+        }
+      ]
     },
     "build": {
-      "dependsOn": [{ "target": "build", "projects": "dependencies" }],
-      "outputs": ["{projectRoot}/dist"]
+      "dependsOn": [
+        {
+          "target": "build",
+          "dependencies": true
+        }
+      ],
+      "outputs": ["{projectRoot}/dist"],
+      "cache": true,
+      "inputs": [
+        {
+          "input": "dist-none"
+        },
+        {
+          "input": "dist-only",
+          "dependencies": true
+        }
+      ]
     },
     "type-check": {
       "dependsOn": [],
       "outputs": []
     },
     "test": {
-      "dependsOn": [{ "target": "build", "projects": "self" }],
-      "outputs": []
+      "dependsOn": [
+        {
+          "target": "build"
+        }
+      ],
+      "outputs": [],
+      "cache": true
     }
   },
   "pluginsConfig": {
-    "@nrwl/js": {
+    "@nx/js": {
       "analyzeSourceFiles": true
     }
   },
@@ -52,18 +64,27 @@
     "packageManager": "pnpm"
   },
   "generators": {},
-  "tasksRunnerOptions": {
-    "default": {
-      "runner": "@nrwl/nx-cloud",
-      "options": {
-        "cacheableOperations": [
-          "build",
-          "type-check",
-          "lint",
-          "test"
-        ],
-        "accessToken": "YzAzNTJmYjgtYWQ2ZS00ODMwLWI3MjktYWU3ZTJlYjMwNWZkfHJlYWQtd3JpdGU="
+  "release": {
+    "projects": ["*"],
+    "projectsRelationship": "independent",
+    "releaseTagPattern": "{projectName}@{version}",
+    "version": {
+      "generatorOptions": {
+        "currentVersionResolver": "git-tag",
+        "specifierSource": "conventional-commits"
       }
+    },
+    "changelog": {
+      "workspaceChangelog": false,
+      "projectChangelogs": {
+        "createRelease": "github",
+        "file": "CHANGELOG.md"
+      }
+    },
+    "git": {
+      "commit": true,
+      "tag": true
     }
-  }
+  },
+  "nxCloudAccessToken": "YzAzNTJmYjgtYWQ2ZS00ODMwLWI3MjktYWU3ZTJlYjMwNWZkfHJlYWQtd3JpdGU="
 }

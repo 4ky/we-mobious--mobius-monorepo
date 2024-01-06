@@ -50,10 +50,10 @@
     }
   },
   "scripts": {
-    "lint": "eslint .",
-    "lint:fix": "eslint . --fix",
     "build": "pnpm exec tsx ./scripts/build.ts",
-    "type-check": "pnpm exec tsx ./scripts/type-check.ts"
+    "type-check": "pnpm exec tsx ./scripts/type-check.ts",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
   },
   "files": [
     "release/**/*",
@@ -75,7 +75,7 @@
   },
   "dependencies": {
     "@html-eslint/parser": "^0.22.0",
-    "@nrwl/eslint-plugin-nx": "^17.2.8",
+    "@nx/eslint-plugin": "^17.2.8",
     "@typescript-eslint/eslint-plugin": "^6.17.0",
     "@typescript-eslint/parser": "^6.17.0",
     "eslint-config-standard": "^17.1.0",

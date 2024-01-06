@@ -1,6 +1,2 @@
 packages:
-  - "elements/**"
-  - "components/**"
-  - "services/**"
   - "packages/**"
-  - "!**/test/**"

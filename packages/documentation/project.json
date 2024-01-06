@@ -1,41 +1,61 @@
 {
-  "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "name": "documentation",
-  "root": "engineerings/documentation",
-  "sourceRoot": "engineerings/documentation/src",
-  "tags": ["type:utility"],
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/documentation/src",
+  "tags": [],
   "implicitDependencies": [],
   "namedInputs": {},
   "targets": {
     "build": {
       "executor": "nx:run-commands",
       "inputs": [
-        { "runtime": "node -v" },
-        { "input": "dev", "projects": "self" },
-        { "input": "all", "projects": "dependencies" }
+        {
+          "runtime": "node -v"
+        },
+        {
+          "input": "dist-none"
+        },
+        {
+          "input": "dist-only",
+          "dependencies": true
+        }
       ],
       "outputs": ["{projectRoot}/dist"],
-      "dependsOn": [{ "target": "build", "projects": "dependencies" }],
+      "dependsOn": [
+        {
+          "target": "build",
+          "dependencies": true
+        }
+      ],
       "options": {
-        "cwd": "engineerings/documentation",
+        "cwd": "packages/documentation",
         "commands": ["pnpm run build"],
         "parallel": false
-      }
-    }
-  },
-  "type-check": {
-    "executor": "nx:run-commands",
-    "inputs": [
-      { "runtime": "node -v" },
-      { "input": "all", "projects": "self" },
-      { "input": "all", "projects": "dependencies" }
-    ],
-    "outputs": [],
-    "dependsOn": [],
-    "options": {
-      "cwd": "engineerings/documentation",
-      "commands": ["pnpm run type-check"],
-      "parallel": true
+      },
+      "cache": true
+    },
+    "type-check": {
+      "executor": "nx:run-commands",
+      "inputs": [
+        {
+          "runtime": "node -v"
+        },
+        {
+          "input": "dist-none"
+        },
+        {
+          "input": "dist-none",
+          "dependencies": true
+        }
+      ],
+      "outputs": [],
+      "dependsOn": [],
+      "options": {
+        "cwd": "packages/documentation",
+        "commands": ["pnpm run type-check"],
+        "parallel": true
+      },
+      "cache": true
     }
   }
 }

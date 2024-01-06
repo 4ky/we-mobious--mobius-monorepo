@@ -1,7 +1,7 @@
 {
-  "name": "tsconfig",
+  "name": "eslint-config",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "packages/tsconfig/src",
+  "sourceRoot": "packages/eslint-config/src",
   "tags": [],
   "implicitDependencies": [],
   "namedInputs": {},
@@ -28,7 +28,7 @@
         }
       ],
       "options": {
-        "cwd": "packages/tsconfig",
+        "cwd": "packages/eslint-config",
         "commands": ["pnpm run build"],
         "parallel": false
       },
@@ -51,7 +51,7 @@
       "outputs": [],
       "dependsOn": [],
       "options": {
-        "cwd": "packages/tsconfig",
+        "cwd": "packages/eslint-config",
         "commands": ["pnpm run type-check"],
         "parallel": true
       },

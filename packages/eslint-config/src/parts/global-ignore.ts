@@ -14,6 +14,7 @@ export const globalIgnores: FlatConfigItem = {
 
     '**/__snapshots__/',
     '**/__tests__/',
+    '**/__fixtures__/',
     '**/coverage/',
     '**/dist/',
     '**/build/',
