@@ -1,7 +1,7 @@
 {
   "name": "@we-mobius/react-example",
   "type": "module",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "private": false,
   "packageManager": "pnpm@7.17.0",
   "author": {
