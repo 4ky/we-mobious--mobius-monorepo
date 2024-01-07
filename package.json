@@ -13,6 +13,7 @@
   "scripts": {
     "prepare": "lefthook install",
     "cz": "pnpm exec cz",
+
     "dev:all": "pnpm exec nx run-many --target=dev --all --parallel",
     "dev:affected": "pnpm exec nx affected --target=dev --all --parallel",
     "test:all": "pnpm exec nx run-many --target=test --all --parallel",
@@ -21,10 +22,15 @@
     "build:affected": "pnpm exec nx affected --target=build --all --parallel",
     "graph:all": "pnpm exec nx graph",
     "graph:watch": "pnpm exec nx graph --watch",
-    "reset": "pnpm exec nx reset",
+    "nx:reset": "pnpm exec nx reset",
+
     "type-check:all": "pnpm exec nx run-many --target=type-check --all --parallel",
     "lint": "pnpm exec eslint .",
-    "lint:fix": "pnpm exec eslint . --fix --ignore-path .gitignore"
+    "lint:fix": "pnpm exec eslint . --fix --ignore-path .gitignore",
+    "change:add": "pnpm exec changeset add",
+    "change:version": "pnpm exec changeset version",
+    "change:status": "pnpm exec changeset status",
+    "change:publish": "pnpm exec changeset publish"
   },
   "dependencies": {
     "@we-mobius/mobius-utils": "^1.8.1"
