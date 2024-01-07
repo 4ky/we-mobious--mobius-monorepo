@@ -1,5 +1,5 @@
 {
-  "extends": "@we-mobius/tsconfig/tsconfig.monorepo.json",
+  "extends": "@we-mobius/tsconfig/tsconfig.base.json",
   "compilerOptions": {
     "baseUrl": ".",
     "rootDir": ".",
