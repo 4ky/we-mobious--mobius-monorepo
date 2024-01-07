@@ -2,7 +2,7 @@
   "name": "@we-mobius/react-example",
   "type": "module",
   "version": "0.0.1",
-  "private": true,
+  "private": false,
   "packageManager": "pnpm@7.17.0",
   "author": {
     "name": "kongxiangyan",

@@ -2,6 +2,7 @@
   "name": "@we-mobius/type-check",
   "type": "module",
   "version": "0.0.1",
+  "private": false,
   "description": "Type-checking support.",
   "author": {
     "name": "kongxiangyan",

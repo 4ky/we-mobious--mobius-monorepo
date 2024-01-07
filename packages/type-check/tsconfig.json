@@ -1,8 +1,5 @@
 {
   "extends": "@we-mobius/tsconfig/tsconfig.base.json",
   "compilerOptions": {},
-  "include": [
-    "*.ts",
-    "*/*.ts"
-  ]
+  "include": ["./src/**/*", "./tests/**/*"]
 }

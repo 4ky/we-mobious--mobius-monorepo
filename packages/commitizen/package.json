@@ -2,6 +2,7 @@
   "name": "@we-mobius/commitizen",
   "type": "module",
   "version": "0.0.5",
+  "private": false,
   "keywords": [
     "mobius",
     "git",
