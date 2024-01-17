@@ -1,3 +1,5 @@
+import { cwd } from 'node:process'
+
 import typescriptEslintPlugin from '@typescript-eslint/eslint-plugin'
 import typescriptEslintParser from '@typescript-eslint/parser'
 
@@ -30,7 +32,13 @@ export const typescriptLanguageOptions: LanguageOptions = {
     jsDocParsingMode: 'none',
     project: true,
     projectFolderIgnoreList: ['**/node_modules/**'],
-    tsconfigRootDir: undefined,
+    /**
+     * Should using with `eslint.workingDirectories` in `.vscode/settings.json`.
+     * For rules that need type information({@link https://typescript-eslint.io/linting/typed-linting/}).
+     * @see {@link https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint}
+     * @see {@link https://github.com/antfu/eslint-config/blob/65baf204430a125d7a3fe6f7ab513814a43d810e/src/configs/typescript.ts#L66-L71}
+     */
+    tsconfigRootDir: cwd(),
     warnOnUnsupportedTypeScriptVersion: true,
     EXPERIMENTAL_useProjectService: true
   }
