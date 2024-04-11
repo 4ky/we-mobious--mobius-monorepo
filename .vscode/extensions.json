@@ -2,7 +2,6 @@
   "recommendations": [
     // Language support
     "vue.volar",
-    "vue.vscode-typescript-vue-plugin",
     "mikestead.dotenv",
     "redhat.vscode-yaml",
     "redhat.vscode-xml",
