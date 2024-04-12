@@ -92,8 +92,8 @@ importers:
   packages/documentation:
     devDependencies:
       '@types/node':
-        specifier: ^20.10.6
-        version: 20.10.6
+        specifier: ^20.12.7
+        version: 20.12.7
       '@we-mobius/eslint-config':
         specifier: workspace:^
         version: link:../eslint-config
@@ -104,14 +104,14 @@ importers:
         specifier: workspace:*
         version: link:../type-check
       esbuild:
-        specifier: ^0.19.11
-        version: 0.19.11
+        specifier: ^0.20.2
+        version: 0.20.2
       tsx:
-        specifier: ^4.7.0
-        version: 4.7.0
+        specifier: ^4.7.2
+        version: 4.7.2
       typescript:
-        specifier: '*'
-        version: 4.9.4
+        specifier: ^5.4.5
+        version: 5.4.5
 
   packages/eslint-config:
     dependencies:
