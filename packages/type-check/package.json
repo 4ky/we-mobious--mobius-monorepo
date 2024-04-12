@@ -1,7 +1,7 @@
 {
   "name": "@we-mobius/type-check",
   "type": "module",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "private": false,
   "description": "Type-checking support.",
   "author": {
@@ -71,11 +71,11 @@
     "typescript": "*"
   },
   "devDependencies": {
-    "@types/node": "^20.10.6",
+    "@types/node": "^20.12.7",
     "@we-mobius/eslint-config": "workspace:^",
     "@we-mobius/tsconfig": "workspace:^",
-    "esbuild": "^0.19.11",
-    "tsx": "^4.7.0",
-    "typescript": "*"
+    "esbuild": "^0.20.2",
+    "tsx": "^4.7.2",
+    "typescript": "^5.4.5"
   }
 }
