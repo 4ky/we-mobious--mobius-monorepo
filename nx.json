@@ -1,17 +1,22 @@
 {
   "$schema": "./node_modules/nx/schemas/project-schema.json",
-  "affected": {
-    "defaultBase": "main"
-  },
+  "defaultBase": "main",
   "namedInputs": {
-    "all": ["{projectRoot}/**/*", "!{projectRoot}/node_modules/**/*"],
+    "all": [
+      "{projectRoot}/**/*",
+      "!{projectRoot}/node_modules/**/*"
+    ],
     "dist-none": [
       "{projectRoot}/**/*",
       "!{projectRoot}/node_modules/**/*",
       "!{projectRoot}/dist/**/*"
     ],
-    "dist-only": ["{projectRoot}/dist/**/*"],
-    "src-only": ["{projectRoot}/src/**/*"]
+    "dist-only": [
+      "{projectRoot}/dist/**/*"
+    ],
+    "src-only": [
+      "{projectRoot}/src/**/*"
+    ]
   },
   "targetDefaults": {
     "dev": {
@@ -29,7 +34,9 @@
           "dependencies": true
         }
       ],
-      "outputs": ["{projectRoot}/dist"],
+      "outputs": [
+        "{projectRoot}/dist"
+      ],
       "cache": true,
       "inputs": [
         {
@@ -65,7 +72,9 @@
   },
   "generators": {},
   "release": {
-    "projects": ["*"],
+    "projects": [
+      "*"
+    ],
     "projectsRelationship": "independent",
     "releaseTagPattern": "{projectName}@{version}",
     "version": {
@@ -86,5 +95,6 @@
       "tag": true
     }
   },
-  "nxCloudAccessToken": "YzAzNTJmYjgtYWQ2ZS00ODMwLWI3MjktYWU3ZTJlYjMwNWZkfHJlYWQtd3JpdGU="
+  "nxCloudAccessToken": "YzAzNTJmYjgtYWQ2ZS00ODMwLWI3MjktYWU3ZTJlYjMwNWZkfHJlYWQtd3JpdGU=",
+  "useInferencePlugins": false
 }
