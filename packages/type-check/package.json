@@ -1,7 +1,7 @@
 {
   "name": "@we-mobius/type-check",
   "type": "module",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "private": false,
   "description": "Type-checking support.",
   "author": {

@@ -23,6 +23,7 @@
     "graph:watch": "pnpm exec nx graph --watch",
     "nx:reset": "pnpm exec nx reset",
     "type-check:all": "pnpm exec nx run-many --target=type-check --all --parallel",
+    "lint:all": "pnpm exec nx run-many --target=lint --all --parallel",
     "lint": "pnpm exec eslint .",
     "lint:fix": "pnpm exec eslint . --fix --ignore-path .gitignore",
     "change:add": "pnpm exec changeset add",
@@ -45,7 +46,6 @@
     "@we-mobius/tsconfig": "workspace:*",
     "eslint": "^9.0.0",
     "lefthook": "^1.6.10",
-    "lint-staged": "^15.2.2",
     "nx": "18.2.4",
     "tsx": "^4.7.2",
     "typescript": "^5.4.5"

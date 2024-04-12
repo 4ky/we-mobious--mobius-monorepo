@@ -1,4 +1,4 @@
-import * as eslintPluginImport from 'eslint-plugin-import'
+import eslintPluginImport from 'eslint-plugin-import-x'
 import eslintPluginN from 'eslint-plugin-n'
 import eslintPluginPromise from 'eslint-plugin-promise'
 import * as espree from 'espree'
@@ -31,16 +31,16 @@ export const javascriptLanguageOptions: LanguageOptions = {
 }
 
 export const javascriptPlugins: Plugins = {
-  import: eslintPluginImport,
+  'import-x': eslintPluginImport,
   promise: eslintPluginPromise,
   n: eslintPluginN
 }
 
 export const javascriptSettings: Settings = {
-  'import/parsers': {
+  'import-x/parsers': {
     espree: ['.js', '.mjs', '.cjs']
   },
-  'import/resolver': {
+  'import-x/resolver': {
     node: { extensions: ['.js', '.mjs', '.cjs'] }
   }
 }
@@ -315,12 +315,12 @@ export const javascriptRulesFromStandard: Rules = {
   'yield-star-spacing': ['error', 'both'],
   yoda: ['error', 'never'],
 
-  'import/export': 'error',
-  'import/first': 'error',
-  'import/no-absolute-path': ['error', { esmodule: true, commonjs: true, amd: false }],
-  'import/no-duplicates': 'error',
-  'import/no-named-default': 'error',
-  'import/no-webpack-loader-syntax': 'error',
+  'import-x/export': 'error',
+  'import-x/first': 'error',
+  'import-x/no-absolute-path': ['error', { esmodule: true, commonjs: true, amd: false }],
+  'import-x/no-duplicates': 'error',
+  'import-x/no-named-default': 'error',
+  'import-x/no-webpack-loader-syntax': 'error',
 
   'n/handle-callback-err': ['error', '^(err|error)$'],
   'n/no-callback-literal': 'error',
@@ -338,39 +338,39 @@ export const javascriptRulesFromStandard: Rules = {
  */
 export const javascriptRulesFromImport: Rules = {
   // import:Static analysis
-  'import/no-unresolved': ['off'],
-  'import/named': ['error'],
-  'import/default': ['error'],
-  'import/namespace': ['error', { allowComputed: true }],
-  'import/no-restricted-paths': ['off'],
-  'import/no-absolute-path': ['error', { esmodule: true, commonjs: true, amd: false }],
-  'import/no-dynamic-require': ['off'],
-  'import/no-internal-modules': ['off'],
-  'import/no-webpack-loader-syntax': ['off'],
-  'import/no-self-import': ['error'],
-  'import/no-cycle': ['off'],
-  'import/no-useless-path-segments': ['error', { noUselessIndex: false, commonjs: true }],
-  'import/no-relative-parent-imports': ['off'],
-  'import/no-relative-packages': ['error'],
+  'import-x/no-unresolved': ['off'],
+  'import-x/named': ['error'],
+  'import-x/default': ['error'],
+  'import-x/namespace': ['error', { allowComputed: true }],
+  'import-x/no-restricted-paths': ['off'],
+  'import-x/no-absolute-path': ['error', { esmodule: true, commonjs: true, amd: false }],
+  'import-x/no-dynamic-require': ['off'],
+  'import-x/no-internal-modules': ['off'],
+  'import-x/no-webpack-loader-syntax': ['off'],
+  'import-x/no-self-import': ['error'],
+  'import-x/no-cycle': ['off'],
+  'import-x/no-useless-path-segments': ['error', { noUselessIndex: false, commonjs: true }],
+  'import-x/no-relative-parent-imports': ['off'],
+  'import-x/no-relative-packages': ['error'],
   // import:Helpful warnings
-  'import/export': ['error'],
-  'import/no-named-as-default': ['error'],
-  'import/no-named-as-default-member': ['off'],
-  'import/no-mutable-exports': ['error'],
-  'import/no-unused-modules': ['off'],
+  'import-x/export': ['error'],
+  'import-x/no-named-as-default': ['error'],
+  'import-x/no-named-as-default-member': ['off'],
+  'import-x/no-mutable-exports': ['error'],
+  'import-x/no-unused-modules': ['off'],
   // import:Module systems
-  'import/unambiguous': ['off'],
-  'import/no-commonjs': ['off'],
-  'import/no-amd': ['error'],
-  'import/no-nodejs-modules': ['off'],
-  'import/no-import-module-exports': ['error'],
+  'import-x/unambiguous': ['off'],
+  'import-x/no-commonjs': ['off'],
+  'import-x/no-amd': ['error'],
+  'import-x/no-nodejs-modules': ['off'],
+  'import-x/no-import-module-exports': ['error'],
   // import:Style guide
-  'import/first': ['error'],
-  'import/exports-last': ['off'],
-  'import/no-duplicates': ['error', { considerQueryString: true }],
-  'import/no-namespace': ['off'],
-  'import/extensions': ['off'],
-  'import/order': ['error', {
+  'import-x/first': ['error'],
+  'import-x/exports-last': ['off'],
+  'import-x/no-duplicates': ['error', { considerQueryString: true }],
+  'import-x/no-namespace': ['off'],
+  'import-x/extensions': ['off'],
+  'import-x/order': ['error', {
     groups: ['builtin', 'external', 'internal', 'parent', 'sibling', 'index', 'object', 'type'],
     pathGroups: [
       {
@@ -390,21 +390,28 @@ export const javascriptRulesFromImport: Rules = {
     },
     warnOnUnassignedImports: false
   }],
-  'import/newline-after-import': ['error', {
-    count: 1
-    // TODO: 2022-10-06 23:22:00 not released yet
-    // considerComments: true
+  'import-x/newline-after-import': ['error', {
+    count: 1,
+    exactCount: true,
+    considerComments: true
   }],
-  'import/prefer-default-export': ['off'],
-  'import/max-dependencies': ['off'],
-  'import/no-unassigned-import': ['error'],
-  'import/no-named-default': ['error'],
-  // TODO: 2022-10-06 23:22:00 not released yet
-  'import/no-anonymous-default-export': ['error'],
-  'import/group-exports': ['off'],
-  'dynamic-import-chunkname': ['off']
-  // TODO: 2022-10-06 23:22:00 not released yet
-  // 'import/consistent-type-specifier-style': ['error', 'prefer-top-level']
+  'import-x/prefer-default-export': ['off'],
+  'import-x/max-dependencies': ['off'],
+  'import-x/no-unassigned-import': ['error'],
+  'import-x/no-named-default': ['error'],
+  'import-x/no-anonymous-default-export': ['error', {
+    allowArray: false,
+    allowArrowFunction: false,
+    allowAnonymousClass: false,
+    allowAnonymousFunction: false,
+    allowCallExpression: true, // The true value here is for backward compatibility
+    allowNew: false,
+    allowLiteral: false,
+    allowObject: false
+  }],
+  'import-x/group-exports': ['off'],
+  'dynamic-import-chunkname': ['off'],
+  'import-x/consistent-type-specifier-style': ['error', 'prefer-top-level']
 }
 
 /**
@@ -470,9 +477,10 @@ export const javascriptRulesFromPromise: Rules = {
     allowFinally: true,
     terminationMethod: ['catch', 'finally']
   }],
-  'promise/no-return-wrap': ['error', {
-    allowReject: true
-  }],
+  // TODO: temporary disabled due to ESLint 9.0.0 release
+  // 'promise/no-return-wrap': ['error', {
+  //   allowReject: true
+  // }],
   'promise/param-names': ['error'],
   // TODO: 2022-10-07 18:04:00 configurations not released yet
   // 'promise/param-names': ['error', {
@@ -487,9 +495,12 @@ export const javascriptRulesFromPromise: Rules = {
   //   ignoreLastCallback: true
   // }],
   'promise/no-native': ['off'],
-  'promise/no-nesting': ['warn'],
-  'promise/no-promise-in-callback': ['warn'],
-  'promise/no-callback-in-promise': ['warn'],
+  // TODO: temporary disabled due to ESLint 9.0.0 release
+  // 'promise/no-nesting': ['warn'],
+  // TODO: temporary disabled due to ESLint 9.0.0 release
+  // 'promise/no-promise-in-callback': ['warn'],
+  // TODO: temporary disabled due to ESLint 9.0.0 release
+  // 'promise/no-callback-in-promise': ['warn'],
   'promise/avoid-new': ['off'],
   'promise/no-new-statics': ['error'],
   'promise/no-return-in-finally': ['error'],

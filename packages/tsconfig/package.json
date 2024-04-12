@@ -1,7 +1,7 @@
 {
   "name": "@we-mobius/tsconfig",
   "type": "module",
-  "version": "0.0.7",
+  "version": "0.0.10",
   "private": false,
   "keywords": [
     "mobius",
@@ -61,8 +61,8 @@
   "devDependencies": {
     "@we-mobius/eslint-config": "workspace:^",
     "@we-mobius/type-check": "workspace:*",
-    "esbuild": "^0.19.11",
-    "tsx": "^4.7.0",
-    "typescript": "*"
+    "esbuild": "^0.20.2",
+    "tsx": "^4.7.2",
+    "typescript": "^5.4.5"
   }
 }

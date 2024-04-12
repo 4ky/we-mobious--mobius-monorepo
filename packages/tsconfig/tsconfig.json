@@ -1,6 +1,16 @@
 {
   "extends": "@we-mobius/tsconfig/tsconfig.base.json",
+  "compilerOptions": {
+    "rootDir": ".",
+    "baseUrl": "./",
+    "paths": {
+      "@/*": ["src/*"]
+    },
+    "lib": ["ESNext"]
+  },
   "include": [
-    "./src/**/*"
+    "*",
+    "src/**/*",
+    "scripts/**/*"
   ]
 }

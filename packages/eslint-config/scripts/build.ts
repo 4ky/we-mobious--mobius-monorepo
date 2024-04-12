@@ -15,6 +15,7 @@ const buildIndex = (): void => {
     splitting: false,
     write: false,
     external: [
+      '@html-eslint/eslint-plugin',
       '@html-eslint/parser',
       '@nx/eslint-plugin',
       '@typescript-eslint/eslint-plugin',
@@ -24,7 +25,7 @@ const buildIndex = (): void => {
       'eslint-import-resolver-typescript',
       'eslint-plugin-eslint-comments',
       'eslint-plugin-html',
-      'eslint-plugin-import',
+      'eslint-plugin-import-x',
       'eslint-plugin-jsonc',
       'eslint-plugin-markdown',
       'eslint-plugin-markdownlint',
@@ -38,10 +39,11 @@ const buildIndex = (): void => {
       'espree',
       'globals',
       'jsonc-eslint-parser',
+      'typescript-eslint',
       'vue-eslint-parser'
     ]
   })
-  const { path, text } = code.outputFiles[0]!
+  const { path, text } = code.outputFiles[0]
 
   const transformText = (text: string): string => {
     return text

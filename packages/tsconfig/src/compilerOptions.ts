@@ -91,9 +91,6 @@ export const DEFAULT_COMPILER_OPTIONS: CompilerOptions = {
   emitDeclarationOnly: false,
   /* Allow importing helper functions from tslib once per project, instead of including them per-file. */
   importHelpers: true,
-  /* Specify emit/checking behavior for imports that are only used for types */
-  // Enforce using `import type` instead of `import` for types
-  importsNotUsedAsValues: ts.ImportsNotUsedAsValues.Preserve,
   /* Include sourcemap files inside the emitted JavaScript. */
   inlineSourceMap: true,
   /* Include source code in the sourcemaps inside the emitted JavaScript. */
@@ -114,9 +111,6 @@ export const DEFAULT_COMPILER_OPTIONS: CompilerOptions = {
   //  "outFile": "",
   /* Disable erasing `const enum` declarations in generated code. */
   preserveConstEnums: true,
-  // For `<script setup>`
-  // See <https://devblogs.microsoft.com/typescript/announcing-typescript-4-5-beta/#preserve-value-imports>
-  preserveValueImports: true,
   /* Disable emitting comments. */
   removeComments: false,
   /* Create source map files for emitted JavaScript files. */
@@ -163,14 +157,6 @@ export const DEFAULT_COMPILER_OPTIONS: CompilerOptions = {
   /*************************************************************************************************************
     *                                                 Backwards Compatibility
     *************************************************************************************************************/
-  /* Disable adding 'use strict' directives in emitted JavaScript files. */
-  noImplicitUseStrict: false,
-  /* Disable strict checking of generic signatures in function types. */
-  noStrictGenericChecks: false,
-  /* Disable reporting of excess property errors during the creation of object literals. */
-  suppressExcessPropertyErrors: false,
-  /* Suppress noImplicitAny errors when indexing objects that lack index signatures. */
-  suppressImplicitAnyIndexErrors: false,
 
   /*************************************************************************************************************
     *                                           Language and Environment

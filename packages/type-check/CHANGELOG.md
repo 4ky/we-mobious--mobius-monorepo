@@ -1,5 +1,11 @@
 # @we-mobius/type-check
 
+## 0.0.4
+
+### Patch Changes
+
+- fix eslint-config error
+
 ## 0.0.3
 
 ### Patch Changes

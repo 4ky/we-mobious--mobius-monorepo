@@ -25,7 +25,7 @@ const code = buildSync({
   write: false,
   external: ['typescript']
 })
-const { path, text } = code.outputFiles[0]!
+const { path, text } = code.outputFiles[0]
 
 const transformText = (text: string): string => {
   return text

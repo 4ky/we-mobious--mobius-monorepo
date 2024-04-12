@@ -1,3 +1,4 @@
+import htmlEslintPlugin from '@html-eslint/eslint-plugin'
 import htmlEslintParser from '@html-eslint/parser'
 import eslintHtmlPlugin from 'eslint-plugin-html'
 
@@ -9,49 +10,61 @@ import type { FlatConfigItem } from '../types'
 export const html: FlatConfigItem = {
   files: ['**/*.html'],
   languageOptions: {
-    parser: htmlEslintParser
+    parser: htmlEslintParser,
+    sourceType: 'module'
   },
   plugins: {
+    '@html-eslint': htmlEslintPlugin,
     html: eslintHtmlPlugin
+  },
+  settings: {
+    'html/html-extensions': ['.html', '.htm'],
+    'html/xml-extensions': ['.xhtml', '.xml'],
+    'html/indent': '+2',
+    'html/report-bad-indent': 'error',
+    'html/javascript-tag-names': ['script', 'customscript'],
+    'html/javascript-mime-types': ['text/javascript', 'text/jsx'],
+    // 'html/javascript-mime-types': '/^text\\/(javascript|jsx)$/'
+    'html/ignore-tags-without-type': false
   },
   rules: {
     // @html-eslint:SEO
-    'html/require-lang': ['error'],
-    'html/require-title': ['error'],
-    'html/no-multiple-h1': ['error'],
-    'html/require-meta-description': ['error'],
+    '@html-eslint/require-lang': ['error'],
+    '@html-eslint/require-title': ['error'],
+    '@html-eslint/no-multiple-h1': ['error'],
+    '@html-eslint/require-meta-description': ['error'],
     // @html-eslint:Style
-    'html/no-extra-spacing-attrs': ['error', { enforceBeforeSelfClose: false }],
-    'html/element-newline': ['error'],
-    'html/indent': ['error', 2],
-    'html/quotes': ['error', 'double'],
-    'html/id-naming-convention': ['off'],
-    'html/no-multiple-empty-lines': ['error', { max: 1 }],
-    'html/no-trailing-spaces': ['error'],
+    '@html-eslint/no-extra-spacing-attrs': ['error', { enforceBeforeSelfClose: false }],
+    '@html-eslint/element-newline': ['error'],
+    '@html-eslint/indent': ['error', 2],
+    '@html-eslint/quotes': ['error', 'double'],
+    '@html-eslint/id-naming-convention': ['off'],
+    '@html-eslint/no-multiple-empty-lines': ['error', { max: 1 }],
+    '@html-eslint/no-trailing-spaces': ['error'],
     // @html-eslint:Best Practices
-    'html/require-doctype': ['error'],
-    'html/no-duplicate-id': ['error'],
-    'html/no-inline-styles': ['off'],
-    'html/require-li-container': ['error'],
-    'html/no-obsolete-tags': ['error'],
-    'html/require-closing-tags': ['error', {
+    '@html-eslint/require-doctype': ['error'],
+    '@html-eslint/no-duplicate-id': ['error'],
+    '@html-eslint/no-inline-styles': ['off'],
+    '@html-eslint/require-li-container': ['error'],
+    '@html-eslint/no-obsolete-tags': ['error'],
+    '@html-eslint/require-closing-tags': ['error', {
       selfClosing: 'always',
       allowSelfClosingCustom: false
     }],
-    'html/require-meta-charset': ['error'],
-    'html/no-target-blank': ['error'],
-    'html/no-duplicate-attrs': ['error'],
-    'html/require-button-type': ['error'],
-    'html/no-restricted-attrs': ['off'],
+    '@html-eslint/require-meta-charset': ['error'],
+    '@html-eslint/no-target-blank': ['error'],
+    '@html-eslint/no-duplicate-attrs': ['error'],
+    '@html-eslint/require-button-type': ['error'],
+    '@html-eslint/no-restricted-attrs': ['off'],
     // @html-eslint:Accessibility
-    'html/require-img-alt': ['error'],
-    'html/no-skip-heading-levels': ['error'],
-    'html/require-frame-title': ['error'],
-    'html/no-non-scalable-viewport': ['error'],
-    'html/no-positive-tabindex': ['error'],
-    'html/require-meta-viewport': ['error'],
-    'html/no-abstract-roles': ['off'],
-    'html/no-aria-hidden-body': ['error'],
-    'html/no-accesskey-attrs': ['warn']
+    '@html-eslint/require-img-alt': ['error'],
+    '@html-eslint/no-skip-heading-levels': ['error'],
+    '@html-eslint/require-frame-title': ['error'],
+    '@html-eslint/no-non-scalable-viewport': ['error'],
+    '@html-eslint/no-positive-tabindex': ['error'],
+    '@html-eslint/require-meta-viewport': ['error'],
+    '@html-eslint/no-abstract-roles': ['off'],
+    '@html-eslint/no-aria-hidden-body': ['error'],
+    '@html-eslint/no-accesskey-attrs': ['warn']
   }
 }

@@ -1,19 +1,19 @@
 import { cwd } from 'node:process'
 
-import typescriptEslintPlugin from '@typescript-eslint/eslint-plugin'
-import typescriptEslintParser from '@typescript-eslint/parser'
+import tseslint from 'typescript-eslint'
 
 import { javascriptPlugins, javascriptRulesFromStandard, javascriptRulesFromMobius, javascriptRules } from './javascript'
 
 import type { LanguageOptions, Plugins, Settings, Rules, FlatConfigItem } from '../types'
 
 export const typescriptLanguageOptions: LanguageOptions = {
-  parser: typescriptEslintParser,
+  parser: tseslint.parser,
   /**
    * @see https://github.com/typescript-eslint/typescript-eslint/blob/main/packages/parser/README.md
    * @see https://typescript-eslint.io/packages/parser/
    */
   parserOptions: {
+    allowAutomaticSingleRunInference: true,
     cacheLifetime: {
       glob: 30
     },
@@ -28,8 +28,12 @@ export const typescriptLanguageOptions: LanguageOptions = {
      */
     sourceType: 'module',
     emitDecoratorMetadata: undefined,
+    experimentalDecorators: undefined,
     extraFileExtensions: undefined,
     jsDocParsingMode: 'none',
+    jsxFragmentName: null,
+    jsxPragma: 'React',
+    programs: undefined,
     project: true,
     projectFolderIgnoreList: ['**/node_modules/**'],
     /**
@@ -46,15 +50,15 @@ export const typescriptLanguageOptions: LanguageOptions = {
 
 export const typescriptPlugins: Plugins = {
   ...javascriptPlugins,
-  typescript: typescriptEslintPlugin
+  typescript: tseslint.plugin
 }
 
 export const typescriptSettings: Settings = {
-  'import/external-module-folders': ['node_modules'],
+  'import-x/external-module-folders': ['node_modules'],
   /**
    * @see https://github.com/import-js/eslint-plugin-import/blob/main/utils/parse.js
    */
-  'import/parsers': {
+  'import-x/parsers': {
     '@typescript-eslint/parser': ['.ts', '.mts', '.cts', '.d.ts', '.d.mts', '.d.cts'],
     /**
      * Note: 即使是为 TypeScript 定制的规则，也需要添加 `expree` 作为 `parser`，
@@ -63,7 +67,7 @@ export const typescriptSettings: Settings = {
      */
     espree: ['.js', '.mjs', '.cjs']
   },
-  'import/resolver': {
+  'import-x/resolver': {
     node: {
       extensions: ['.ts', '.mts', '.cts']
     },
@@ -75,7 +79,7 @@ export const typescriptSettings: Settings = {
       alwaysTryTypes: true
     }
   },
-  'import/cache': {
+  'import-x/cache': {
     lifetime: 30
   }
 }
@@ -380,7 +384,7 @@ export const typescriptRulesFromESLintConfigStandardWithTypeScript: Rules = {
 
 export const typescriptRulesFromImport = {
   // TypeScript compilation already ensures that named imports exist in the referenced module
-  'import/named': 'off'
+  'import-x/named': 'off'
 }
 
 export const equivalentsBetweenTypeScriptESLintRulesAndJavaScriptRulesFromMobius = [
