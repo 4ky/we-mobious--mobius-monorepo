@@ -1,7 +1,7 @@
 import { defineWorkspace } from 'vitest/config'
 
-const workspaceConfig = defineWorkspace([
+const config = defineWorkspace([
   'packages/*/vitest.config.ts'
 ])
 
-export default workspaceConfig
+export default config
