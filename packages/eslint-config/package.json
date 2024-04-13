@@ -3,6 +3,13 @@
   "type": "module",
   "version": "0.0.4",
   "private": false,
+  "packageManager": "pnpm@8.15.6",
+  "license": "GPL-3.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/we-mobius/mobius-monorepo.git",
+    "directory": "packages/eslint-config"
+  },
   "keywords": [
     "mobius",
     "eslint",
@@ -60,8 +67,9 @@
     "release/**/*",
     "dist/**/*",
     "build/**/*",
-    "src/**/*",
     "scripts/**/*",
+    "specs/**/*",
+    "src/**/*",
     "public/**/*",
     "docs/**/*",
     "bin/**/*",
