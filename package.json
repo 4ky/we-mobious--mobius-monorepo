@@ -25,6 +25,7 @@
     "type-check:all": "pnpm exec nx run-many --target=type-check --all --parallel",
     "lint:all": "pnpm exec nx run-many --target=lint --all --parallel",
     "lint": "pnpm exec eslint .",
+    "lint:inspect": "pnpm eslint-config-inspector",
     "lint:fix": "pnpm exec eslint . --fix --ignore-path .gitignore",
     "change:add": "pnpm exec changeset add",
     "change:version": "pnpm exec changeset version",
@@ -38,6 +39,7 @@
     "@changesets/cli": "^2.27.1",
     "@changesets/config": "^3.0.0",
     "@commitlint/cli": "^19.2.1",
+    "@eslint/config-inspector": "^0.4.6",
     "@nx/devkit": "18.2.4",
     "@nx/js": "18.2.4",
     "@types/node": "18.16.9",
@@ -48,6 +50,7 @@
     "lefthook": "^1.6.10",
     "nx": "18.2.4",
     "tsx": "^4.7.2",
-    "typescript": "^5.4.5"
+    "typescript": "^5.4.5",
+    "vitest": "^1.5.0"
   }
 }
