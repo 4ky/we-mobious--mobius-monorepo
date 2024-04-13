@@ -221,6 +221,9 @@ importers:
       '@types/node':
         specifier: ^20.12.7
         version: 20.12.7
+      '@we-mobius/eslint-config':
+        specifier: workspace:^
+        version: link:../eslint-config
       '@we-mobius/tsconfig':
         specifier: workspace:^
         version: link:../tsconfig

@@ -76,6 +76,7 @@
   },
   "devDependencies": {
     "@types/node": "^20.12.7",
+    "@we-mobius/eslint-config": "workspace:^",
     "@we-mobius/tsconfig": "workspace:^",
     "@we-mobius/type-check": "workspace:*",
     "esbuild": "^0.20.2",
